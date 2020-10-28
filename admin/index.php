@@ -19,7 +19,9 @@
   
 </head>
 
-<body>
+<body style = "background-image: url('https://images.unsplash.com/photo-1537640685236-a9df2496e232?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+background-size: cover; z-index:20;
+">
 
  <div class="container">
 
@@ -40,7 +42,11 @@
       </div> <!-- end login -->
 
     </div>
-    <div class="bottom">  <h3><a href="../index.php">SUN RISE HOMEPAGE</a></h3></div>
+    <h1 style="color:#fff">SUN OF BEACH ADMIN</h1>
+    <a href="../index.php">
+    <img style="position:relative; right:-63%; margin-top:3%; width:35%; " src="../images/title.png" alt="Go to Homepage">
+    </a>
+    
   
   
 </body>
