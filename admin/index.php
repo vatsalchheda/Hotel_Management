@@ -44,7 +44,7 @@ background-size: cover; z-index:20;
     </div>
     <h1 style="color:#fff">SUN OF BEACH ADMIN</h1>
     <a href="../index.php">
-    <img style="position:relative; right:-63%; margin-top:3%; width:35%; " src="../images/title.png" alt="Go to Homepage">
+    <img style="position:relative; right:-30%; margin-top:5%; width:40%; " src="../images/title.png" alt="Go to Homepage">
     </a>
     
   
