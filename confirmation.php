@@ -14,22 +14,6 @@ if(isset($_GET['u'])){
 	$booking_id=$_GET['u'];
 }
 
-if(isset($_GET['cat'])){
-	$the_room_category=$_GET['cat'];
-}
-
-if($the_room_category=="simple"){
-    $amount="123";
-}
-
-if($the_room_category=="deluxe"){
-    $amount="456";
-}
-
-if($the_room_category=="suite"){
-    $amount="789";
-}
-
 $query= "SELECT * FROM booking WHERE Booking_id='{$booking_id}'";
 $select_bookings=mysqli_query($con, $query);
         while($row=mysqli_fetch_assoc($select_bookings)){
@@ -37,6 +21,34 @@ $select_bookings=mysqli_query($con, $query);
             $room_id=$row['room_id'];
             $branch_id=$row['branch_id'];
         }
+
+$query= "SELECT * FROM hotel WHERE branch_id='{$branch_id}'";
+$select_bookings=mysqli_query($con, $query);
+        while($row=mysqli_fetch_assoc($select_bookings)){
+            $branch_name=$row['branch_name'];
+        }
+
+$room_category=['simple','deluxe','suite'];
+
+  for($i=0; $i<3; $i++){
+    $query="SELECT * FROM $room_category[$i] WHERE room_id='{$room_id}'";
+    $select_all_rooms=mysqli_query($con, $query);
+    while($row=mysqli_fetch_assoc($select_all_rooms)){
+            $the_room_category=$room_category[$i];
+        }
+  }
+
+if($the_room_category=="simple"){
+    $amount="5000";
+}
+
+if($the_room_category=="deluxe"){
+    $amount="10000";
+}
+
+if($the_room_category=="suite"){
+    $amount="15000";
+}
 
 $query= "SELECT * FROM hotel WHERE branch_id='{$branch_id}'";
 $select_bookings=mysqli_query($con, $query);
@@ -336,8 +348,8 @@ tr:hover .cut { opacity: 1; }
 						<td><span ><?php echo ucfirst($the_room_category); ?></span></td>
 						<td><span ><?php echo $branch_name; ?></span></td>
 						<td><span ><?php echo $days; ?> </span></td>
-						<td><span data-prefix>$</span><span ><?php  echo $amount;?></span></td>
-						<td><span data-prefix>$</span><span><?php echo $total_amount; ?></span></td>
+						<td><span data-prefix></span><span ><?php  echo "&#x20B9 {$amount}";?></span></td>
+						<td><span data-prefix></span><span><?php echo "&#x20B9 {$total_amount}"; ?></span></td>
 					</tr>
 				</tbody>
 			</table>
@@ -345,7 +357,7 @@ tr:hover .cut { opacity: 1; }
 			<table class="balance">
 				<tr>
 					<th style="background: #f57c00; color: #fff"><span >Total</span></th>
-					<td><span data-prefix>$</span><span><?php echo $total_amount; ?></span></td>
+					<td><span data-prefix></span><span><?php echo "&#x20B9 {$total_amount}"; ?></span></td>
 				</tr>
 			</table>
 		</article>

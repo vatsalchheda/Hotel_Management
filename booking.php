@@ -30,15 +30,15 @@ $query="SELECT $the_room_category.room_id FROM $the_room_category JOIN rooms ON 
     }
 
 if($the_room_category=="simple"){
-    $amount="123";
+    $amount="5000";
 }
 
 if($the_room_category=="deluxe"){
-    $amount="456";
+    $amount="10000";
 }
 
 if($the_room_category=="suite"){
-    $amount="789";
+    $amount="15000";
 }
 
 $total=$amount*(ceil((strtotime($check_out)-strtotime($check_in))/86400));
@@ -52,9 +52,12 @@ if(isset($_POST['add_booking'])){
 	$dob=$_POST['dob'];
 	$passport_no=$_POST['passport_no'];
 	$payment_type=$_POST['payment_type'];
-	$n_rooms=$_POST['n_rooms'];
-	$n_adults=$_POST['n_adults'];
-	$n_children=$_POST['n_children'];
+
+	if(isset($_POST['dep_name'])) {
+		$dep_name=$_POST['dep_name'];
+		$dep_id=$_POST['dep_id'];		
+	}
+	
 
 	$query="SELECT * FROM customer WHERE cust_id=(SELECT MAX(cust_id) FROM customer)";
 	$select_cust_id=mysqli_query($con, $query);
@@ -68,7 +71,11 @@ if(isset($_POST['add_booking'])){
     $bill_id = substr(str_shuffle(str_repeat("0123456789", 6)), 0, 6);
     $booking_date = date('Y-m-d H:i:s');
 
-    $query="INSERT INTO customer(cust_id, cust_email, cust_phone, passport_no, country, dob, f_name, l_name) VALUES('{$the_cust_id}', '{$cust_email}', '{$cust_phone}', '{$passport_no}', '{$country}', '{$dob}', '{$f_name}', '{$l_name}')";
+   $query="INSERT INTO customer(cust_id, cust_email, cust_phone, passport_no, country, dob, f_name, l_name) VALUES('{$the_cust_id}', '{$cust_email}', '{$cust_phone}', '{$passport_no}', '{$country}', '{$dob}', '{$f_name}', '{$l_name}')";
+  	$create_query=mysqli_query($con,$query);
+	confirm($create_query);
+
+	$query="INSERT INTO dependents(cust_id, dep_name, passport_no) VALUES('{$the_cust_id}', '{$dep_name}', '{$dep_id}')";
   	$create_query=mysqli_query($con,$query);
 	confirm($create_query);
 
@@ -89,6 +96,7 @@ if(isset($_POST['add_booking'])){
 	confirm($create_query);
 	
 	header("Location: confirmation.php?u={$booking_id}&cat={$the_room_category}");
+
 }
 	
 ?>
@@ -103,11 +111,9 @@ if(isset($_POST['add_booking'])){
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-		<script src="script.js"></script>
 		<style>
-			.section {
-	position: relative;
-	height: 100%;
+.section {
+	height: 150%;
 	background-image: url('./images/background2.jpg');
 	background-size:cover;
 	
@@ -129,7 +135,6 @@ if(isset($_POST['add_booking'])){
 .booking-form {
 	position: relative;
 	max-width: 940px;
-
 	width:100%;
 	margin: auto;
 	padding: 40px;
@@ -181,6 +186,8 @@ if(isset($_POST['add_booking'])){
 	box-shadow: 0px 0px 0px 2px transparent;
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
+	display: inline;
+    width: 250px;
 }
 
 .booking-form .form-control::-webkit-input-placeholder {
@@ -257,7 +264,7 @@ if(isset($_POST['add_booking'])){
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	width:150px;
+	width:250px;
 	float:left;
 	margin-right:30px;
 	
@@ -346,6 +353,35 @@ if(isset($_POST['add_booking'])){
     table-layout: fixed; /*Optional*/
     border-spacing: 10px; /*Optional*/
 }
+
+#depText {
+	color: #e35e0a;
+	margin-bottom: 30px;
+	cursor: pointer;
+	margin-left: 20px;
+}
+.form-btn {
+	margin-top: 20px;
+}
+#removeBtn {
+	margin-top: 20px;
+	background: red;
+	border-radius: 50%;
+	outline: 0;
+	color: white;
+	border-width: 0;
+	height: 30px;
+	width: 30px;
+}
+#totalAmount {
+	color: white;
+	text-align: center;
+	margin: 20px;
+}
+.timer {
+	color: white;
+	text-align: center;
+}
 		</style>
 
 <body>
@@ -357,85 +393,51 @@ if(isset($_POST['add_booking'])){
 						<div class="form-header">
 							<h1>Make your reservation</h1>
 						</div>
-						<form action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								
+						<form action="" method="post" enctype="multipart/form-data" id="confirm_form">
+							<div class="form-group">	
 								<input class="form-control" type="text" placeholder="First Name" name="f_name" required>
-								
-								</div>
-
-								<div class="form-group">
-								<input class="form-control" type="text" placeholder="Last Name" name="l_name" required>
-								
-								
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="text" placeholder="Last Name" name="l_name" required>	
 							</div>
 							<div class="row">
-								
 									<div class="form-group" style="margin-top:10px">
 										<input class="form-control" type="date" name="dob" required>
 										<span class="form-label">Date of birth</span>
-									
 										<input class="form-control" type="text" placeholder="Country" name="country" required>
-								
 									</div>
-								
-								
 							</div>
-							<div class="row">
-								
+							<div class="row">						
 									<div class="form-group">
-										<select class="form-control" name="n_rooms" required>
-											<option value="" selected hidden>No of rooms</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
+										<input class="form-control" type="email" placeholder="Enter your Email" name="cust_email" required>
+										<span class="form-label">Email</span>
 										
-									
-										<select class="form-control" name="n_adults" required>
-											<option value="" selected hidden>No of adults</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-										
-										<select class="form-control" name="n_children" required>
-											<option value="" selected hidden>No of children</option>
-											<option>0</option>
-											<option>1</option>
-											<option>2</option>
-										</select>
-										
+										<input class="form-control" type="text" placeholder="Passport Number" name="passport_no" required>
 									</div>
 								
 							</div>
 							<div class="row">
 									<div class="form-group" style="margin-top:10px">
-										<input class="form-control" type="email" placeholder="Enter your Email" name="cust_email" required>
-										<span class="form-label">Email</span>
-
-										<input class="form-control" type="text" placeholder="Passport No" name="passport_no" required>
-									</div>
-								
-							</div>	
-									<div class="form-group" style="margin-top:10px; width:250px">
-										<input class="form-control" type="number" placeholder="Enter you Phone" name="cust_phone" maxlength="10" required>
+										<input class="form-control" type="number" placeholder="Enter your Phone" name="cust_phone" maxlength="10" required>
 										<span class="form-label">Phone</span>
-
-										
-										<select class="form-control" style= "width:250px; margin-top:20px; margin-bottom:20px " name="payment_type" required>
+										<select class="form-control" style= "width:250px;" name="payment_type" required>
 											<option value="" selected hidden>Payment Method</option>
 											<option>Cash</option>
 											<option>Card</option>
 											<option>Net Banking</option>
-										</select>
+										</select>	
 									</div>
+							</div>	
 								
-							
+							<div onclick="addDep()" id="depText"><h4>Add Dependent +</h4></div>
 							
 							<div class="form-btn">
-		<input type="submit" class="submit-btn" name="add_booking" value="Book NOw">
-	</div>
+								<input type="submit" class="submit-btn" name="add_booking" value="Book Now">
+							</div>
+							<h2 id="totalAmount"><?php echo "Total Amount- &#x20B9 {$total}" ?></h2>
+							<div class="timer">
+   								<time id="countdown">Session will expire in 5:00</time>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -462,13 +464,11 @@ if(isset($_POST['add_booking'])){
 			}
 		}
 	</script>
-		
-	<div><?php echo "{$total}" ?></div>
+
+	<div></div>
 	
 
-<div class="timer">
-    <time id="countdown">Session will expire in 5:00</time>
-</div>
+
 			
 
 </body>
@@ -510,9 +510,52 @@ if(isset($_POST['add_booking'])){
         } 
         else {
           seconds--;
-        }
-    }
-    var countdownTimer = setInterval('secondPassed()', 1000);
+        } 
+    } 
+    var countdownTimer = setInterval('secondPassed()', 1000); 
+    var flag=0;
+    function addDep(e) {
+    		var container = document.getElementById("confirm_form");
+                var dep_name = document.createElement("input");
+                var dep_id = document.createElement("input");
+                dep_name.type = "text";
+                dep_name.setAttribute("name", "dep_name");
+                dep_id.type = "text";
+                dep_id.setAttribute("name", "dep_id");
+                dep_name.classList.add("form-control");
+                dep_name.classList.add("dynamic_dep");
+                dep_name.placeholder="Dependent Name";
+                dep_id.classList.add("form-control");
+                dep_id.classList.add("dynamic_dep");
+                dep_id.placeholder="Passport Number";
+                var remove = document.createElement('button');
+    			remove.setAttribute('id', 'removeBtn');
+    			remove.innerHTML="&#8213;"
+    			remove.onclick = function(e) {
+      				removeElement(e)
+    			};
+                var pos = document.getElementsByClassName("form-btn")[0];
+                container.insertBefore(dep_name, pos);
+                container.insertBefore(dep_id, pos);
+                container.insertBefore(remove, pos);
+                container.insertBefore(document.createElement("br"), pos);
+                console.log(dep_name)
+                document.getElementById("depText").style.display="none";
+    	
+}
+
+function removeElement(ev) {
+	var container = document.getElementById("confirm_form");
+    var remove = ev.target;
+    var dep_name = document.getElementsByName("dep_name")[0];
+    var dep_id = document.getElementsByName("dep_id")[0];
+    remove.style.display="none";
+    container.removeChild(dep_name);
+    container.removeChild(dep_id);
+    container.removeChild(remove);
+    document.getElementById("depText").style.display="block";
+
+  }
 </script>
 
 
