@@ -95,7 +95,9 @@ $query = "SELECT * FROM customer WHERE cust_id='{$cust_id}'";
 	<head>
 		<meta charset="utf-8">
 		<title>Invoice</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
 		<script src="script.js"></script>
 		<style>
@@ -361,5 +363,6 @@ tr:hover .cut { opacity: 1; }
 			<h1><span >thank you for visiting</span></h1>
 			<p style="color:#616161; text-align:center; font-size:70% ">Email : info@sunofbeach.com || Web : www.sunofbeach.com || Phone : (+91) 22 2224 4555 </p>
 		</aside>
+		<?php include "include/footer.php" ?>
 	</body>
 </html>
