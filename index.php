@@ -520,9 +520,7 @@ include('db.php');
 	</div>
   <!-- visitors -->
 
-			<div class="copy">
-		        <p>© 2020 SUNOFBEACH . All Rights Reserved | Design by <a href="index.php">SUN OF BEACH</a> </p>
-		    </div>
+  <?php include "include/footer.php" ?>
 <!--/footer -->
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>

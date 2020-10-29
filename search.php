@@ -14,6 +14,7 @@ include "db.php";
     />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="Search.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>Sun of Beach</title>
 

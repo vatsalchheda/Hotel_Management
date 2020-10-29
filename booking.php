@@ -120,13 +120,14 @@ if(isset($_POST['add_booking'])){
 
 <html>
 	<head>
-	
+	<title>SunOfBeach/Booking</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+		<link rel="stylesheet" href="./css/style.css" />
+		
 
 <style>
 	.section {
@@ -410,8 +411,9 @@ if(isset($_POST['add_booking'])){
 
 
 <body>
-	<?php include "include/navigation.php" ?>
+<?php include "include/navigation.php" ?>
 	<div id="booking" class="section">
+	
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
@@ -441,9 +443,8 @@ if(isset($_POST['add_booking'])){
 								</div>
 							</div>
 							<div class="row">
-								<div class="form-group" style="margin-top:10px">
-									<input class="form-control" type="number" placeholder="Enter your Phone" name="cust_phone" maxlength="10" required>
-									<span class="form-label">Phone</span>
+							<div class="form-group" style="margin-top:0px">
+										<input class="form-control" type="text" placeholder="Enter your Phone" name="cust_phone" minlength="10" maxlength="10"  required>
 									<select class="form-control" style= "width:250px; height: 60px;" name="payment_type" required>
 										<option value="" selected hidden>Payment Method</option>
 										<option>Cash</option>
@@ -452,7 +453,7 @@ if(isset($_POST['add_booking'])){
 									</select>	
 								</div>
 							</div>				
-							<div onclick="addDep()" id="depText"><h4>Add Dependent +</h4></div>
+							<div onclick="addDep()" id="depText"><h6 style="color:rgba(255,255,255,0.75)">Add Dependent +</h6></div>
 
 							<div class="form-btn">
 								<input type="submit" class="submit-btn" name="add_booking" value="Book Now">
@@ -552,7 +553,6 @@ if(isset($_POST['add_booking'])){
             container.insertBefore(dep_name, pos);
             container.insertBefore(dep_id, pos);
             container.insertBefore(remove, pos);
-            container.insertBefore(document.createElement("br"), pos);
             console.log(dep_name)
             document.getElementById("depText").style.display="none";	
 		}
