@@ -108,10 +108,10 @@ include "db.php";
                 <div class="card__cta">
                   <div class="card__price-box">
                     
-                    <p class="card__price-value">$2.95/day*</p>
+                    <p class="card__price-value">&#x20B9 5000/day*</p>
                   </div>
                 <?php
-                if($category_count[0]!=0){
+                if($category_count[0]!=0 && isset($_POST['search'])){
                  echo "<a class='btn btn--white' href='booking.php?u=simple&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
                  } 
                  ?>
@@ -148,10 +148,10 @@ include "db.php";
                 <div class="card__cta">
                   <div class="card__price-box">
                     
-                    <p class="card__price-value">$5.45/day*</p>
+                    <p class="card__price-value">&#x20B9 10000/day*</p>
                   </div>
                   <?php
-                if($category_count[1]!=0){
+                if($category_count[1]!=0 && isset($_POST['search'])){
                  echo "<a class='btn btn--white' href='booking.php?u=deluxe&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
                  } 
                  ?>
@@ -189,10 +189,10 @@ include "db.php";
                 <div class="card__cta">
                   <div class="card__price-box">
                     
-                    <p class="card__price-value">$13.95/day</p>
+                    <p class="card__price-value">&#x20B9 15000/day</p>
                   </div>
                  <?php
-                if($category_count[2]!=0){
+                if($category_count[2]!=0 && isset($_POST['search'])){
                  echo "<a class='btn btn--white' href='booking.php?u=suite&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
                  } 
                  ?>
