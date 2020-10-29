@@ -12,9 +12,8 @@ function confirm($result){
 
 if(isset($_POST['search'])){
     $booking_id=$_POST['booking_id'];
+    header("Location: confirmation.php?u={$booking_id}");
   }
-
-  header("Location: confirmation.php?u={$booking_id}");
 
 ?>
 
@@ -38,13 +37,13 @@ if(isset($_POST['search'])){
   <div class="SearchContainer">
     <form action="" method="post" enctype="multipart/form-data">
       <br><br><br>
-      <div class="FormDiv">
+      <div class="FormDiv" style="min-height:84vh;">
           <h1>View Your Booking</h1>
           <br>
           <div>
             <label>Enter your Booking ID</label>
             <input type="number" id="booking_id" name="booking_id"  required>
-            <input type="submit" name="search" class="btn--green btn-submit" onclick="submitbutton()">
+            <input type="submit" name="search" class="btn--green btn-submit">
           </div>
       </div>
     </form>

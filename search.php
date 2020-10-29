@@ -53,6 +53,8 @@ include "db.php";
     }
   }
 ?>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
   <div class="SearchContainer">
     <form action="" method="post" enctype="multipart/form-data">
       <br><br><br>
@@ -69,13 +71,14 @@ include "db.php";
             <label> Check In Date    </label>
             <input type="date" id="check_in" name="check_in" min='<?php echo date('Y-m-d');?>' required>
             <label> Check Out Date   </label>
-            <input type="date" id="check_out" name="check_out" min='<?php echo date('Y-m-d');?>' onchange="chec   k()" required>
-            <input type="submit" name="search" class="btn--green btn-submit" onclick="submitbutton()">
+            <input type="date" id="check_out" name="check_out" min='<?php echo date('Y-m-d');?>' onchange="check()" required>
+            <input type="submit" name="search" class="btn-submit" onclick="submitbutton()" placeholder="SUBMIT">
           </div>
       </div>
     </form>
   </div>
-  
+  </div>
+</div>  
      <section class="section-plans" id="section-plans">  
         <div class="row" id="row">
           <div class="">
@@ -84,21 +87,17 @@ include "db.php";
                 <div class="card__title card__title--1">
                   <div class="Room_Container">
                               <div class="Room_Image Room_Column">
-                                
+                                <!-- IMAGE -->
                               </div> 
-
                               <div class="Room_Column"> 
-                                <ul>
-                                  <li> Breakfast</li>
-                                  <li> Room Service</li>
-                                  <li> WiFi</li>
-                                  <li> Laundry</li>
-                                </ul>
+                                 <p><i class="fas fa-coffee"></i>Breakfast</p>
+                                 <p><i class="fas fa-concierge-bell"></i>Room Service</p>
+                                 <p><i class="fas fa-wifi"></i>WiFi</p>
+                                 <p><i class="fas fa-tshirt"></i>Laundry</p>
                               </div>
-
                               <div class="Room_Column">
                                 <h4 >Simple</h4>
-                                <h4><?php echo $category_count[0] ?> rooms</h4>
+                                <h4><?php echo $category_count[0] ?> Rooms Available</h4>
                               </div>  
                   </div>
                 </div>
@@ -124,22 +123,20 @@ include "db.php";
             <div class="card">
               <div class="card__side card__side--front-2">
                 <div class="card__title card__title--2">
-                  <div class="Room_Container">
+                <div class="Room_Container">
                               <div class="Room_Image Room_Column">
-                                
+                                <!-- IMAGE -->
                               </div> 
-
                               <div class="Room_Column"> 
-                                <ul>
-                                  <li> Perks of Simple Included</li>
-                                  <li> Balcony </li>
-                                  <li> Access to SPA and Gymnasium </li>
-                                </ul>
+                                 <p><i class="fas fa-star"></i>Perks of Simple Included</p>
+                                 <p><i class="fas fa-water"></i>Balcony</p>
+                                 <p><i class="fas fa-spa"></i>Access to SPA </p>
+                                 <p><i class="fas fa-dumbbell"></i>Access to Gymnasium</p>
+
                               </div>
-                              
                               <div class="Room_Column">
                                 <h4 >Deluxe</h4>
-                                <h4><?php echo $category_count[1] ?> rooms</h4>
+                                <h4><?php echo $category_count[1] ?> Rooms Available</h4>
                               </div>  
                   </div>
                 </div>
@@ -166,22 +163,19 @@ include "db.php";
                 <div class="card__title card__title--3">
                 <div class="Room_Container">
                               <div class="Room_Image Room_Column">
-                                
+                                <!-- IMAGE -->
                               </div> 
-
                               <div class="Room_Column"> 
-                                <ul>
-                                  <li> Perks of Deluxe Included</li>
-                                  <li> Drawing Room </li>
-                                  <li> Closet </li>
-                                  <li> Transfers </li>
-                                </ul>
+                                 <p><i class="fas fa-star"></i>Perks of Deluxe Included</p>
+                                 <p><i class="fas fa-walking"></i>Walk In Closet</p>
+                                 <p><i class="fas fa-hot-tub"></i>Jacuzzi </p>
+                                 <p><i class="fas fa-taxi"></i>Transfers</p>
+
                               </div>
                               <div class="Room_Column">
-                                <br>
-                                <h4 >Suite</h4>
-                                <h4><?php echo $category_count[2] ?> rooms</h4>
-                              </div> 
+                                <h4 >Deluxe</h4>
+                                <h4><?php echo $category_count[2] ?> Rooms Available</h4>
+                              </div>  
                   </div>
                 </div>
               </div>
