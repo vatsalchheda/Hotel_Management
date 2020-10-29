@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Sun of Beach Admin</a>
+                <a class="navbar-brand" href="index.php"><img src="../images/title.png" style="height: 30px; width: 200px;"></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#rooms_dropdown"><i class="fa fa-fw fa-bed"></i> Rooms <i class="fa fa-fw fa-caret-down"></i></a>
@@ -54,6 +54,9 @@
                     </li>
                     <li>
                         <a href="customers.php"><i class="fa fa-fw fa-user-friends"></i> Customers</a>
+                    </li>
+                    <li>
+                        <a href="dependents.php"><i class="fa fa-fw fa-user-shield"></i> Dependents</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#employees_dropdown"><i class="fa fa-fw fa-file-text"></i> Employees <i class="fa fa-fw fa-caret-down"></i></a>

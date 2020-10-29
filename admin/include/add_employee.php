@@ -140,11 +140,11 @@ if(isset($_POST['create_room_service'])){
 		background: none;
 	}
 	.plus {
-		margin: 50px;
+		margin-right: 50px;
 	}
 </style>
 
-<h2><button class="dropdown" onclick="toggle_visibility('manager')">Manager <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('manager')"><span class="plus">+</span>Manager </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="manager">
 	<div class="form-group">
 		<label for="f_name">First Name</label>
@@ -191,7 +191,7 @@ if(isset($_POST['create_room_service'])){
 	</div>
 </form>
 
-<h2><button class="dropdown" onclick="toggle_visibility('receptionist')">Receptionist <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('receptionist')"><span class="plus">+</span>Receptionist </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="receptionist">
 	<div class="form-group">
 		<label for="f_name">First Name</label>
@@ -238,7 +238,7 @@ if(isset($_POST['create_room_service'])){
 	</div>
 </form>
 
-<h2><button class="dropdown" onclick="toggle_visibility('room_service')">Room Service <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('room_service')"><span class="plus">+</span>Room Service </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="room_service">
 	<div class="form-group">
 		<label for="f_name">First Name</label>
@@ -285,7 +285,7 @@ if(isset($_POST['create_room_service'])){
 	</div>
 </form>
 
-<h2><button class="dropdown" onclick="toggle_visibility('kitchen_staff')">Kitchen Staff <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('kitchen_staff')"><span class="plus">+</span>Kitchen Staff </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="kitchen_staff">
 	<div class="form-group">
 		<label for="f_name">First Name</label>

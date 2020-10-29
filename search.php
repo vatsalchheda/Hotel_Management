@@ -14,7 +14,7 @@ include "db.php";
     />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="Search.css" />
-    <title>Sunrise Hotels</title>
+    <title>Sun of Beach</title>
 </head>
 <body>
   <?php include "include/navigation.php" ?>
@@ -62,15 +62,15 @@ include "db.php";
           <h1>Search for Rooms</h1>
           <br>
           <div>
-            <label>Location</label>
+            <label>Location  </label>
             <select id="country" name="branch_id" required>
                 <option value="">Select</option>
                 <option value="1">Mumbai</option>
                 <option value="2">Bangalore</option>
             </select>
-            <label> Check In Date    </label>
+            <label>   Check In Date    </label>
             <input type="date" id="check_in" name="check_in" min='<?php echo date('Y-m-d');?>' required>
-            <label> Check Out Date   </label>
+            <label>   Check Out Date   </label>
             <input type="date" id="check_out" name="check_out" min='<?php echo date('Y-m-d');?>' onchange="check()" required>
             <input type="submit" name="search" class="btn-submit" onclick="submitbutton()" placeholder="SUBMIT">
           </div>
@@ -79,143 +79,135 @@ include "db.php";
   </div>
   </div>
 </div>  
-     <section class="section-plans" id="section-plans">  
-        <div class="row" id="row">
-          <div class="">
-            <div class="card">
-              <div class="card__side card__side--front-1">
-                <div class="card__title card__title--1">
-                  <div class="Room_Container">
-                              <div class="Room_Image Room_Column">
-                                <!-- IMAGE -->
-                              </div> 
-                              <div class="Room_Column"> 
-                                 <p><i class="fas fa-coffee"></i>Breakfast</p>
-                                 <p><i class="fas fa-concierge-bell"></i>Room Service</p>
-                                 <p><i class="fas fa-wifi"></i>WiFi</p>
-                                 <p><i class="fas fa-tshirt"></i>Laundry</p>
-                              </div>
-                              <div class="Room_Column">
-                                <h4 >Simple</h4>
-                                <h4><?php echo $category_count[0] ?> Rooms Available</h4>
-                              </div>  
-                  </div>
-                </div>
+<section class="section-plans" id="section-plans">  
+  <div class="row" id="row">
+    <div class="">
+      <div class="card">
+        <div class="card__side card__side--front-1">
+          <div class="card__title card__title--1">
+            <div class="Room_Container">
+              <div class="Room_Image Room_Column">
+              </div> 
+              <div class="Room_Column"> 
+                 <p><i class="fas fa-coffee"></i>Breakfast</p>
+                 <p><i class="fas fa-concierge-bell"></i>Room Service</p>
+                 <p><i class="fas fa-wifi"></i>WiFi</p>
+                 <p><i class="fas fa-tshirt"></i>Laundry</p>
               </div>
-
-              <div class="card__side card__side--back card__side--back-1">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    
-                    <p class="card__price-value">&#x20B9 5000/day*</p>
-                  </div>
-                <?php
-                if($category_count[0]!=0 && isset($_POST['search'])){
-                 echo "<a class='btn btn--white' href='booking.php?u=simple&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
-                 } 
-                 ?>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="">
-            <div class="card">
-              <div class="card__side card__side--front-2">
-                <div class="card__title card__title--2">
-                <div class="Room_Container">
-                              <div class="Room_Image Room_Column">
-                                <!-- IMAGE -->
-                              </div> 
-                              <div class="Room_Column"> 
-                                 <p><i class="fas fa-star"></i>Perks of Simple Included</p>
-                                 <p><i class="fas fa-water"></i>Balcony</p>
-                                 <p><i class="fas fa-spa"></i>Access to SPA </p>
-                                 <p><i class="fas fa-dumbbell"></i>Access to Gymnasium</p>
-
-                              </div>
-                              <div class="Room_Column">
-                                <h4 >Deluxe</h4>
-                                <h4><?php echo $category_count[1] ?> Rooms Available</h4>
-                              </div>  
-                  </div>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-2">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    
-                    <p class="card__price-value">&#x20B9 10000/day*</p>
-                  </div>
-                  <?php
-                if($category_count[1]!=0 && isset($_POST['search'])){
-                 echo "<a class='btn btn--white' href='booking.php?u=deluxe&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
-                 } 
-                 ?>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="">
-            <div class="card">
-              <div class="card__side card__side--front-3">
-                <div class="card__title card__title--3">
-                <div class="Room_Container">
-                              <div class="Room_Image Room_Column">
-                                <!-- IMAGE -->
-                              </div> 
-                              <div class="Room_Column"> 
-                                 <p><i class="fas fa-star"></i>Perks of Deluxe Included</p>
-                                 <p><i class="fas fa-walking"></i>Walk In Closet</p>
-                                 <p><i class="fas fa-hot-tub"></i>Jacuzzi </p>
-                                 <p><i class="fas fa-taxi"></i>Transfers</p>
-
-                              </div>
-                              <div class="Room_Column">
-                                <h4 >Deluxe</h4>
-                                <h4><?php echo $category_count[2] ?> Rooms Available</h4>
-                              </div>  
-                  </div>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-3">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    
-                    <p class="card__price-value">&#x20B9 15000/day</p>
-                  </div>
-                 <?php
-                if($category_count[2]!=0 && isset($_POST['search'])){
-                 echo "<a class='btn btn--white' href='booking.php?u=suite&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
-                 } 
-                 ?>
-                </div>
-              </div>
+              <div class="Room_Column">
+                <h4 class="rightText">Simple</h4>
+                <h4 class="rightText"><?php echo $category_count[0] ?> Rooms Available</h4>
+              </div>  
             </div>
           </div>
         </div>
-      </section>
-        <?php include "include/footer.php" ?>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <p class="card__price-value">&#x20B9 5000/day</p>
+            </div>
+            <?php
+            if($category_count[0]!=0 && isset($_POST['search'])){
+              echo "<a class='btn btn--white' href='booking.php?u=simple&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
+            } 
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="">
+      <div class="card">
+        <div class="card__side card__side--front-2">
+          <div class="card__title card__title--2">
+          <div class="Room_Container">
+            <div class="Room_Image Room_Column">
+            </div> 
+            <div class="Room_Column"> 
+               <p><i class="fas fa-star"></i>Perks of Simple Included</p>
+               <p><i class="fas fa-water"></i>Balcony</p>
+               <p><i class="fas fa-spa"></i>Access to SPA </p>
+               <p><i class="fas fa-dumbbell"></i>Access to Gymnasium</p>
+            </div>
+            <div class="Room_Column">
+              <h4 class="rightText">Deluxe</h4>
+              <h4 class="rightText"><?php echo $category_count[1] ?> Rooms Available</h4>
+            </div>  
+            </div>
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-2">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <p class="card__price-value">&#x20B9 10000/day</p>
+            </div>
+            <?php
+            if($category_count[1]!=0 && isset($_POST['search'])){
+              echo "<a class='btn btn--white' href='booking.php?u=deluxe&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
+            } 
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="">
+      <div class="card">
+        <div class="card__side card__side--front-3">
+          <div class="card__title card__title--3">
+          <div class="Room_Container">
+            <div class="Room_Image Room_Column">
+            </div> 
+            <div class="Room_Column"> 
+               <p><i class="fas fa-star"></i>Perks of Deluxe Included</p>
+               <p><i class="fas fa-walking"></i>Walk In Closet</p>
+               <p><i class="fas fa-hot-tub"></i>Jacuzzi </p>
+               <p><i class="fas fa-taxi"></i>Transfers</p>
+            </div>
+            <div class="Room_Column">
+              <h4 class="rightText">Suite</h4>
+              <h4 class="rightText"><?php echo $category_count[2] ?> Rooms Available</h4>
+            </div>  
+            </div>
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-3">
+          <div class="card__cta">
+            <div class="card__price-box">  
+              <p class="card__price-value">&#x20B9 15000/day</p>
+            </div>
+            <?php
+            if($category_count[2]!=0 && isset($_POST['search'])){
+              echo "<a class='btn btn--white' href='booking.php?u=suite&cin={$check_in}&cout={$check_out}&branch={$branch_id}'>Book</a>";
+            }   
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php include "include/footer.php" ?>
 
        <!-- jQuery -->
-    <script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap-3.1.1.min.js"></script>
-    <script type="text/javascript">
-      function check() {
-        if(document.getElementById('check_in').value >= document.getElementById('check_out').value) {
-          alert('Check out must be after check in!')
-          document.getElementById('check_out').value= document.getElementById('check_in').value;
-        }
-      }
-      function submitbutton() {
-        setTimeout(() => {
-        console.log("SUBMIT")
-        document.getElementById('row').class('block')
-        }, 2000);
-      }
-    </script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript">
+  function check() {
+    if(document.getElementById('check_in').value >= document.getElementById('check_out').value) {
+      alert('Check out must be after check in!')
+      document.getElementById('check_out').value= document.getElementById('check_in').value;
+    }
+  }
+
+  function submitbutton() {
+    setTimeout(() => {
+    console.log("SUBMIT")
+    document.getElementById('row').class('block')
+    }, 2000);
+  }
+</script>
 </body>
 </html>

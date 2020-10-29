@@ -11,29 +11,37 @@ function confirm($result){
 }
 
 if(isset($_POST['search'])){
-    $booking_id=$_POST['booking_id'];
+  $booking_id=$_POST['booking_id'];
+  $query="SELECT * FROM booking WHERE booking_id='{$booking_id}'";
+  $check_id=mysqli_query($con, $query);
+  if (mysqli_num_rows($check_id) != 0){
     header("Location: confirmation.php?u={$booking_id}");
   }
+  else {
+    $warning="Please enter the correct booking id";
+    echo "<script>alert('$warning')</script>";
+  }
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="Search.css" />
-    <title>Sunrise Hotels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+    rel="stylesheet"
+  />
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="Search.css" />
+  <title>Sun of Beach</title>
 </head>
 <body>
   <?php include "include/navigation.php" ?>
-
+  
   <div class="SearchContainer">
     <form action="" method="post" enctype="multipart/form-data">
       <br><br><br>
@@ -48,13 +56,13 @@ if(isset($_POST['search'])){
       </div>
     </form>
   </div>
-  <!-- SIMRN CODE OF INVOICE -->
-        <?php include "include/footer.php" ?>
+  
+  <?php include "include/footer.php" ?>
 
-       <!-- jQuery -->
-    <script src="js/jquery-2.1.4.min.js"></script>
+  <!-- jQuery -->
+  <script src="js/jquery-2.1.4.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap-3.1.1.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap-3.1.1.min.js"></script>
 </body>
 </html>
