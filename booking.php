@@ -408,6 +408,7 @@ if(isset($_POST['add_booking'])){
 	}
 </style>
 
+
 <body>
 	<?php include "include/navigation.php" ?>
 	<div id="booking" class="section">
@@ -452,6 +453,7 @@ if(isset($_POST['add_booking'])){
 								</div>
 							</div>				
 							<div onclick="addDep()" id="depText"><h4>Add Dependent +</h4></div>
+
 							<div class="form-btn">
 								<input type="submit" class="submit-btn" name="add_booking" value="Book Now">
 							</div>
@@ -554,6 +556,7 @@ if(isset($_POST['add_booking'])){
             console.log(dep_name)
             document.getElementById("depText").style.display="none";	
 		}
+
 
 		function removeElement(ev) {
 			var container = document.getElementById("confirm_form");

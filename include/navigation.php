@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="height:9vh">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="height:9vh; padding-top:5px ">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -8,10 +8,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./index.php"><img src="./images/title.png" style="width:90%;position:initial;"></a>
+                <a class="navbar-brand" href="./index.php"><img src="./images/title.png" style="width:90%;position:initial; padding-top:7px"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top:10px;font-size:20px">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top:10px;font-size:20px;">
                 <ul class="nav navbar-nav">
                   
                      <li>
@@ -21,7 +21,7 @@
                      	<a href='./view_booking.php'>View Booking</a>
                      </li>
                      <li>
-                     	<a href='#contact'>Contact Us</a>
+                     	<a href='./contact.php'>Contact Us</a>
                      </li>
                     <li>
                         <a href="admin">Admin</a>

@@ -28,6 +28,7 @@ if(isset($_POST['search'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
@@ -38,6 +39,7 @@ if(isset($_POST['search'])){
   <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="Search.css" />
   <title>Sun of Beach</title>
+
 </head>
 <body>
   <?php include "include/navigation.php" ?>
