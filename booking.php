@@ -125,13 +125,13 @@ if(isset($_POST['add_booking'])){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="./css/style.css" />
 		
 
 <style>
 	.section {
-		height: 130%;
+		height: 150%;
 		background-image: url('./images/background2.jpg');
 		background-size:cover;
 		
@@ -378,6 +378,7 @@ if(isset($_POST['add_booking'])){
 		margin-bottom: 30px;
 		cursor: pointer;
 		margin-left: 20px;
+		font-size: 20px;
 	}
 	.form-btn {
 		margin-top: 20px;
@@ -453,7 +454,7 @@ if(isset($_POST['add_booking'])){
 									</select>	
 								</div>
 							</div>				
-							<div onclick="addDep()" id="depText"><h6 style="color:rgba(255,255,255,0.75)">Add Dependent +</h6></div>
+							<div onclick="addDep()" id="depText">Add Dependent +</div>
 
 							<div class="form-btn">
 								<input type="submit" class="submit-btn" name="add_booking" value="Book Now">
