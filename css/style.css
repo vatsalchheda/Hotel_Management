@@ -1482,14 +1482,15 @@ text-align:center;
 /*-- //Gallery Section --*/
 /*-- contact --*/
 section.contact-w3ls {
-	background:url(../images/contact.jpg) no-repeat;
+	background:url('https://images.unsplash.com/photo-1537640685236-a9df2496e232?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') ;
 	background-position:center;
 	background-attachment:fixed;
-	background-size:100% 100%;
-	-webkit-background-size:100% 100%;
+	background-size:120% 100%;
+	-webkit-background-size:120% 100%;
 	-moz-background-size:100% 100%;
 	-o-background-size:100% 100%;
 	-ms-background-size:100% 100%;
+	height: 9in;
 }
 section.contact-w3ls p.contact-agile1 {
     font-size: 15px;
@@ -1497,19 +1498,19 @@ section.contact-w3ls p.contact-agile1 {
     font-weight: normal;
     padding-bottom: 10px;
     line-height: 29px;
-    color: #fff;
+    color:rgb(29, 17, 7);
 }
 section.contact-w3ls p.contact-agile1 strong {
     font-family: 'Federo', sans-serif;
     letter-spacing: 1.5px;
-    color: #ffce14!important;
+    color: rgb(29, 17, 7)!important;
 	font-size: 16px;
 }
 section.contact-w3ls p.contact-agile1 a {
-	color:#fff;
+	color:rgb(29, 17, 7);
 }
 section.contact-w3ls .contact-agileits,.contact-w3-agile1 {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(252, 247, 247, 0.384);
     padding: 20px 35px;
 }
 section.contact-w3ls h4 {
@@ -1526,14 +1527,14 @@ section.contact-w3ls p.contact-agile2 {
 	font-weight:normal;
 	padding-bottom:20px;
 	line-height:30px;
-	color:#ffce14;
+	color:rgb(255, 255, 255);
 	text-align:center;
 }
 section.contact-w3ls label.contact-p1 {
     font-size: 17px;
 	letter-spacing: 1px;
     font-weight: 300;
-    color:#fff;
+    color:rgb(29, 17, 7);
     padding-bottom: 10px;
 	font-family: 'Federo', sans-serif;
 }
@@ -2353,6 +2354,7 @@ color: #fff !important;
 		width: 100%;
 		background: #a5a5a5;
 		z-index: 999;
+		
 	}
 	.navbar-toggle {
 		margin: .8em 0 0;

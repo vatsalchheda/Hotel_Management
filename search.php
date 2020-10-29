@@ -14,7 +14,8 @@ include "db.php";
     />
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="Search.css" />
-    <title>Sunrise Hotels</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Sun Of Beach Hotels</title>
 </head>
 <body>
   <?php include "include/navigation.php" ?>

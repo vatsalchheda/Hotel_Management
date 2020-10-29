@@ -355,10 +355,11 @@ if(isset($_POST['add_booking'])){
 }
 
 #depText {
-	color: #e35e0a;
+	color:rgba(255, 255, 255, 0.72);
 	margin-bottom: 30px;
 	cursor: pointer;
-	margin-left: 20px;
+	margin-left: 5px;
+	margin-top: 15px;
 }
 .form-btn {
 	margin-top: 20px;
@@ -409,17 +410,17 @@ if(isset($_POST['add_booking'])){
 							</div>
 							<div class="row">						
 									<div class="form-group">
-										<input class="form-control" type="email" placeholder="Enter your Email" name="cust_email" required>
-										<span class="form-label">Email</span>
+										<input style="padding:16px" class="form-control" type="email" placeholder="Enter your Email" name="cust_email" required>
+										
 										
 										<input class="form-control" type="text" placeholder="Passport Number" name="passport_no" required>
 									</div>
 								
 							</div>
 							<div class="row">
-									<div class="form-group" style="margin-top:10px">
-										<input class="form-control" type="number" placeholder="Enter your Phone" name="cust_phone" maxlength="10" required>
-										<span class="form-label">Phone</span>
+									<div class="form-group" style="margin-top:0px">
+										<input class="form-control" type="text" placeholder="Enter your Phone" name="cust_phone" minlength="10" maxlength="10"  required>
+										
 										<select class="form-control" style= "width:250px;" name="payment_type" required>
 											<option value="" selected hidden>Payment Method</option>
 											<option>Cash</option>
@@ -429,7 +430,7 @@ if(isset($_POST['add_booking'])){
 									</div>
 							</div>	
 								
-							<div onclick="addDep()" id="depText"><h4>Add Dependent +</h4></div>
+							<div onclick="addDep()" id="depText"><h6>Add Dependent +</h6></div>
 							
 							<div class="form-btn">
 								<input type="submit" class="submit-btn" name="add_booking" value="Book Now">
@@ -538,7 +539,7 @@ if(isset($_POST['add_booking'])){
                 container.insertBefore(dep_name, pos);
                 container.insertBefore(dep_id, pos);
                 container.insertBefore(remove, pos);
-                container.insertBefore(document.createElement("br"), pos);
+                
                 console.log(dep_name)
                 document.getElementById("depText").style.display="none";
     	
