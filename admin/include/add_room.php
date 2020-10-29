@@ -74,11 +74,11 @@ if(isset($_POST['create_suite'])){
 		background: none;
 	}
 	.plus {
-		margin: 50px;
+		margin-right: 30px;
 	}
 </style>
 
-<h2><button class="dropdown" onclick="toggle_visibility('simple')">Simple <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('simple')"><span class="plus">+</span>Simple </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="simple">
 	<div class="form-group">
 		<label for="room_id">Room ID</label>
@@ -104,7 +104,7 @@ if(isset($_POST['create_suite'])){
 	</div>
 </form>
 
-<h2><button class="dropdown" onclick="toggle_visibility('deluxe')">Deluxe <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('deluxe')"><span class="plus">+</span>Deluxe </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="deluxe">
 	<div class="form-group">
 		<label for="room_id">Room ID</label>
@@ -136,7 +136,7 @@ if(isset($_POST['create_suite'])){
 	</div>
 </form>
 
-<h2><button class="dropdown" onclick="toggle_visibility('suite')">Suite <span class="plus">+</span></button></h2>
+<h2><button class="dropdown" onclick="toggle_visibility('suite')"><span class="plus">+</span>Suite </button></h2>
 <form action="" method="post" enctype="multipart/form-data" id="suite">
 	<div class="form-group">
 		<label for="room_id">Room ID</label>

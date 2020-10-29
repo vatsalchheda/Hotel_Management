@@ -16,17 +16,17 @@ if(isset($_GET['u'])){
 
 $query= "SELECT * FROM booking WHERE Booking_id='{$booking_id}'";
 $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $cust_id=$row['cust_id'];
-            $room_id=$row['room_id'];
-            $branch_id=$row['branch_id'];
-        }
+	while($row=mysqli_fetch_assoc($select_bookings)){
+	    $cust_id=$row['cust_id'];
+	    $room_id=$row['room_id'];
+	    $branch_id=$row['branch_id'];
+	}
 
 $query= "SELECT * FROM hotel WHERE branch_id='{$branch_id}'";
 $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $branch_name=$row['branch_name'];
-        }
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $branch_name=$row['branch_name'];
+    }
 
 $room_category=['simple','deluxe','suite'];
 
@@ -34,8 +34,8 @@ $room_category=['simple','deluxe','suite'];
     $query="SELECT * FROM $room_category[$i] WHERE room_id='{$room_id}'";
     $select_all_rooms=mysqli_query($con, $query);
     while($row=mysqli_fetch_assoc($select_all_rooms)){
-            $the_room_category=$room_category[$i];
-        }
+        $the_room_category=$room_category[$i];
+    }
   }
 
 if($the_room_category=="simple"){
@@ -52,46 +52,44 @@ if($the_room_category=="suite"){
 
 $query= "SELECT * FROM hotel WHERE branch_id='{$branch_id}'";
 $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $branch_name=$row['branch_name'];
-        }
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $branch_name=$row['branch_name'];
+    }
 
 $query= "SELECT * FROM forr WHERE Booking_id='{$booking_id}'";
 $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $check_in=$row['check_in_date'];
-            $check_out=$row['check_out_date'];
-            $days=(ceil((strtotime($check_out)-strtotime($check_in))/86400));
-        }
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $check_in=$row['check_in_date'];
+        $check_out=$row['check_out_date'];
+        $days=(ceil((strtotime($check_out)-strtotime($check_in))/86400));
+    }
 
 $query= "SELECT * FROM generates WHERE Booking_id='{$booking_id}'";
 $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $bill_id=$row['Bill_id'];
-            $booking_date=$row['booking_date'];
-        }      
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $bill_id=$row['Bill_id'];
+        $booking_date=$row['booking_date'];
+    }      
 
 $query= "SELECT * FROM bill WHERE Bill_id='{$bill_id}'";
 $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $total_amount=$row['Amount'];
-            $payment=$row['Payment_type'];
-        }  
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $total_amount=$row['Amount'];
+        $payment=$row['Payment_type'];
+    }  
 
 $query = "SELECT * FROM customer WHERE cust_id='{$cust_id}'";
-        $select_bookings=mysqli_query($con, $query);
-        while($row=mysqli_fetch_assoc($select_bookings)){
-            $cust_email=$row['cust_email'];
-            $cust_phone=$row['cust_phone'];
-            $f_name=$row['f_name'];
-            $l_name=$row['l_name'];
-            $country=$row['country'];
-            $dob=$row['dob'];
-			$passport_no=$row['passport_no'];
-			  
-		}
+    $select_bookings=mysqli_query($con, $query);
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $cust_email=$row['cust_email'];
+        $cust_phone=$row['cust_phone'];
+        $f_name=$row['f_name'];
+        $l_name=$row['l_name'];
+        $country=$row['country'];
+        $dob=$row['dob'];
+		$passport_no=$row['passport_no'];
+	}
 ?>
-
 
 <html>
 	<head>
@@ -283,8 +281,6 @@ tr:hover .cut { opacity: 1; }
 				<br>(+91) 22 2224 4555</p>
 			</address>
 			<span><img alt="" src="images/title.png" ></span>
-			
-
 		</header>
 		<invoice>
 			<h1>Invoice</h1>
@@ -305,8 +301,7 @@ tr:hover .cut { opacity: 1; }
 				<tr>
 					<th><span >Booking ID</span></th>
 					<td><span ><?php echo $booking_id; ?> </span></td>
-				</tr>
-				
+				</tr>	
 			</table>
 			
 			<table class="deja">
@@ -333,6 +328,7 @@ tr:hover .cut { opacity: 1; }
 					<td><span ><?php echo $cust_phone; ?></span></td>
 				</tr>
 			</table>
+
 			<table class="inventory">
 				<thead>
 					<tr>
@@ -363,9 +359,7 @@ tr:hover .cut { opacity: 1; }
 		</article>
 		<aside>
 			<h1><span >thank you for visiting</span></h1>
-			
-				<p style="color:#616161; text-align:center; font-size:70% ">Email : info@sunofbeach.com || Web : www.sunofbeach.com || Phone : (+91) 22 2224 4555 </p>
-			
+			<p style="color:#616161; text-align:center; font-size:70% ">Email : info@sunofbeach.com || Web : www.sunofbeach.com || Phone : (+91) 22 2224 4555 </p>
 		</aside>
 	</body>
 </html>

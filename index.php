@@ -30,7 +30,9 @@ include('db.php');
 </head>
 <body>
 <!-- header -->
-<?php include "include/navigation.php" ?>
+
+  <?php include "include/navigation.php" ?>
+
 
 <!-- //header -->
 		<!-- banner -->
