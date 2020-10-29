@@ -148,12 +148,12 @@ td { border-color: #DDD; }
 html { font: 16px/1 'Open Sans', sans-serif; overflow: auto; }
 html { background: #999; cursor: default; }
 
-body { box-sizing: border-box; height: 11in; margin: 0 auto; overflow: hidden; padding: 0.5in; width: 100%; }
+body { box-sizing: border-box; margin: 0 auto; overflow: hidden; padding: 0.5in; padding-bottom: 0; width: 100%; }
 body { background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5); }
 
 /* header */
 
-header { margin: 0 0 3em; }
+header { margin: 0 0 3em; margin-top: 50px; }
 header:after { clear: both; content: ""; display: table; }
 
 header h1 { background: #000; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 0.5em 0; }
@@ -277,6 +277,7 @@ tr:hover .cut { opacity: 1; }
 		</style>
 	</head>
 	<body>
+		<?php include "include/navigation.php" ?>
 		<header>	
 			<address >
 				<p>Bala Sahani Road, Mumbai, India

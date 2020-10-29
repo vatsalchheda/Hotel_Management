@@ -31,8 +31,8 @@ background-size: cover; z-index:20;
 
           <fieldset class="clearfix">
 
-            <p><span class="fontawesome-user"></span><input type="text"  name="user" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-            <p><span class="fontawesome-lock"></span><input type="password" name="pass"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p><span class="fontawesome-user"></span><input type="text"  name="user" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p>
+            <p><span class="fontawesome-lock"></span><input type="password" name="pass"  value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> 
             <p><input type="submit" name="sub"  value="Login"></p>
 
           </fieldset>
@@ -42,7 +42,6 @@ background-size: cover; z-index:20;
       </div> <!-- end login -->
 
     </div>
-    <h1 style="color:#fff">SUN OF BEACH ADMIN</h1>
     <a href="../index.php">
     <img style="position:relative; right:-30%; margin-top:5%; width:40%; " src="../images/title.png" alt="Go to Homepage">
     </a>

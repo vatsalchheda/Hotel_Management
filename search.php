@@ -98,8 +98,8 @@ include "db.php";
                  <p><i class="fas fa-tshirt"></i>Laundry</p>
               </div>
               <div class="Room_Column">
-                <h4 class="rightText">Simple</h4>
-                <h4 class="rightText"><?php echo $category_count[0] ?> Rooms Available</h4>
+                <h4>Simple</h4> <br> <br>
+                <h4><?php echo $category_count[0] ?> Rooms Available</h4>
               </div>  
             </div>
           </div>
@@ -133,8 +133,8 @@ include "db.php";
                <p><i class="fas fa-dumbbell"></i>Access to Gymnasium</p>
             </div>
             <div class="Room_Column">
-              <h4 class="rightText">Deluxe</h4>
-              <h4 class="rightText"><?php echo $category_count[1] ?> Rooms Available</h4>
+              <h4>Deluxe</h4> <br> <br>
+              <h4><?php echo $category_count[1] ?> Rooms Available</h4>
             </div>  
             </div>
           </div>
@@ -168,8 +168,8 @@ include "db.php";
                <p><i class="fas fa-taxi"></i>Transfers</p>
             </div>
             <div class="Room_Column">
-              <h4 class="rightText">Suite</h4>
-              <h4 class="rightText"><?php echo $category_count[2] ?> Rooms Available</h4>
+              <h4>Suite</h4> <br> <br>
+              <h4><?php echo $category_count[2] ?> Rooms Available</h4>
             </div>  
             </div>
           </div>
