@@ -6,7 +6,7 @@ include('db.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SUNRISE HOTEL</title>
+<title>SUN OF BEACH HOTELS</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,7 +41,7 @@ include('db.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./index.php">Sun Of Beach</a>
+                <a class="navbar-brand" href="./index.php"><img src="./images/title.png" style="width:90%;position:initial;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

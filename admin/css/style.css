@@ -75,12 +75,14 @@ p {
 /* ---------- LOGIN ---------- */
 #login {
   width: 280px;
+  
 }
 
 #login form span {
-  background-color: #363b41;
+  background-color: #e76735;
+  
   border-radius: 3px 0px 0px 3px;
-  color: #606468;
+  color: #faf7f5a9;
   display: block;
   float: left;
   height: 50px;
@@ -94,9 +96,9 @@ p {
 }
 
 #login form input[type="text"], input[type="password"] {
-  background-color: #3b4148;
+  background-color: #faf7f5a9;
   border-radius: 0px 3px 3px 0px;
-  color: #606468;
+  color: #ca6019f3;
   margin-bottom: 1em;
   padding: 0 16px;
   width: 230px;
@@ -106,7 +108,7 @@ p {
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #ea4c88;
+  background-color: #df5506;
   color: #eee;
   font-weight: bold;
   margin-bottom: 2em;
@@ -115,7 +117,7 @@ p {
 }
 
 #login form input[type="submit"]:hover {
-  background-color: #d44179;
+  background-color: #e76735;
 }
 
 #login > p {
