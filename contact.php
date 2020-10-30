@@ -33,8 +33,8 @@
             <div class="container">
                 <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile2" data-aos="flip-left">
                     <div class="contact-agileits">
-                        <h4>Contact Us</h4>
-                        <p class="contact-agile2">Sign Up For Our News Letters</p>
+                        <h4 style="color:#df5506">Contact Us</h4>
+                        <p class="contact-agile2" style="color:#df5506">Sign Up For Our News Letters</p>
                         <form  method="post" name="sentMessage" id="contactForm" >
                             <div class="control-group form-group">
                                 
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
-                    <h4>Connect With Us</h4>
+                    <h4 style="color:#df5506">Connect With Us</h4>
                     <p class="contact-agile1"><strong>Phone :</strong>(+91) 22 2224 4555</p>
                     <p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@SUNOFBEACH.COM</a></p>
                     <p class="contact-agile1"><strong>Address :</strong> Bala Sahani Road, Mumbai, India</p>

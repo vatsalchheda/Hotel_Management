@@ -45,13 +45,13 @@ if(isset($_POST['search'])){
 <body>
   <?php include "include/navigation.php" ?>
   
-  <div class="SearchContainer">
+  <div class="SearchContainer ViewBookingContainer">
     <form action="" method="post" enctype="multipart/form-data">
       <br><br><br>
       <div class="FormDiv" style="min-height:84vh;">
           <h1>View Your Booking</h1>
           <br>
-          <div>
+          <div class="ViewBookingInputContainer">
             <label>Enter your Booking ID</label>
             <input type="number" id="booking_id" name="booking_id"  required>
             <input type="submit" name="search" class="btn--green btn-submit">

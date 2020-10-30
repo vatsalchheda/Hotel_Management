@@ -50,8 +50,8 @@ include('db.php');
 									<h3>We know what you love</h3>
 										<p>Welcome to our hotels</p>
 									<div class="agileits_w3layouts_more menu__item">
-				<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
-			</div>
+										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal" class="LearnMore">Learn More</a>
+									</div>
 								</div>	
 							</div>
 						</div>
@@ -89,11 +89,6 @@ include('db.php');
 			<div class="clearfix"> </div>
 			<!--banner Slider starts Here-->
 		</div>
-		    <div class="thim-click-to-bottom">
-				<a href="#about" class="scroll">
-					<i class="fa fa-long-arrow-down" aria-hidden="true"></i>
-				</a>
-			</div>
 	</div>	
 	<!-- //banner --> 
 <!--//Header-->
@@ -105,7 +100,7 @@ include('db.php');
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4>SUN  <span>RISE</span></h4>
+										<h4>SUN OF <span>BEACH</span></h4>
 										<img src="images/1.jpg" alt=" " class="img-responsive">
 										<h5>We know what you love</h5>
 										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes Star Hotel one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
@@ -133,28 +128,28 @@ include('db.php');
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_road"></span>
 							<h4 class="cbp-ig-title">MASTER BEDROOMS</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<span class="cbp-ig-category">SUN OF BEACH</span>
 						</div>
 					</li>
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_cube"></span>
 							<h4 class="cbp-ig-title">SEA VIEW BALCONY</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<span class="cbp-ig-category">SUN OF BEACH</span>
 						</div>
 					</li>
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_users"></span>
 							<h4 class="cbp-ig-title">LARGE CAFE</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<span class="cbp-ig-category">SUN OF BEACH</span>
 						</div>
 					</li>
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_ticket"></span>
 							<h4 class="cbp-ig-title">WIFI COVERAGE</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<span class="cbp-ig-category">SUN OF BEACH</span>
 						</div>
 					</li>
 				</ul>
@@ -166,7 +161,7 @@ include('db.php');
  	<div class="about-wthree" id="about">
 		  <div class="container">
 				   <div class="ab-w3l-spa">
-                            <h3 class="title-w3-agileits title-black-wthree">About Our SUN RISE</h3> 
+                            <h3 class="title-w3-agileits title-black-wthree">About Our SUN OF BEACH</h3> 
 						   <p class="about-para-w3ls">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, at imperdiet urna</p>
 						   <img src="images/about.jpg" class="img-responsive" alt="Hair Salon">
 										<div class="w3l-slider-img">
@@ -215,16 +210,16 @@ include('db.php');
 			<div id="horizontalTab">
 					<ul class="resp-tabs-list">
 					<li>
-						<img src="images/teams1.jpg" alt=" " class="img-responsive" />
+						<img src="images/teams1.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teams2.jpg" alt=" " class="img-responsive" />
+						<img src="images/teams2.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teams3.jpg" alt=" " class="img-responsive" />
+						<img src="images/teams3.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teams4.jpg" alt=" " class="img-responsive" />
+						<img src="images/teams4.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					</ul>
 					<div class="resp-tabs-container">
@@ -232,15 +227,14 @@ include('db.php');
 						<div class="col-md-6 team-img-w3-agile">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Lucas Jimenez</h4>
-							<span>Manager</span>
+							<h4>Simrn Gupta</h4>
+							<span>COO, SON OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
 								<li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
 								<li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li> 
-								<li><a href="#" class="fa fa-rss icon-border rss"> </a></li>
 							</ul>
 						</div>							
 						</div>
@@ -250,15 +244,14 @@ include('db.php');
 					<div class="col-md-6 team-img-w3-agile">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Sarah Connor</h4>
-							<span>Receptionist</span>
+							<h4>Uditi Namdev</h4>
+							<span>CFO, SON OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>	
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
 								<li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
 								<li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li> 
-								<li><a href="#" class="fa fa-rss icon-border rss"> </a></li>
 							</ul>
 						</div>							
 						</div>
@@ -268,15 +261,14 @@ include('db.php');
 						<div class="col-md-6 team-img-w3-agile">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Ivan Simpson</h4>
-							<span>Manager</span>
+							<h4>Vanshay Gupta</h4>
+							<span>CTO, SON OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
 								<li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
 								<li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li> 
-								<li><a href="#" class="fa fa-rss icon-border rss"> </a></li>
 							</ul>
 						</div>							
 						</div>
@@ -286,15 +278,14 @@ include('db.php');
 					<div class="col-md-6 team-img-w3-agile">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Marc Gutierrez</h4>
-							<span>Receptionist</span>
+							<h4>Vatsal Chheda</h4>
+							<span>CEO, SON OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
 								<li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
 								<li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li> 
-								<li><a href="#" class="fa fa-rss icon-border rss"> </a></li>
 							</ul>
 						</div>							
 						</div>
@@ -436,7 +427,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Julia Rose</h5>
+								<h5>Sartaj Singh</h5>
 								<p>Germany</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -460,7 +451,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Jahnatan Smith</h5>
+								<h5>Prem Chopda</h5>
 								<p>United States</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -484,7 +475,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Rosalind Cloer</h5>
+								<h5>Munna Tripthi</h5>
 								<p>Italy</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -508,7 +499,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Amie Bublitz</h5>
+								<h5>Kabir Khan</h5>
 								<p>Switzerland</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -620,23 +611,7 @@ fit: true
 </script>
 <!--//tabs-->
 <!-- smooth scrolling -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-		/*
-			var defaults = {
-			containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-		*/								
-		$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
 	
-	<div class="arr-w3ls">
-	<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-	</div>
 <!-- //smooth scrolling -->
 <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
