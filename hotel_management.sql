@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2020 at 10:51 AM
+-- Generation Time: Oct 31, 2020 at 05:53 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.31
 
@@ -118,15 +118,18 @@ INSERT INTO `deluxe` (`wifi`, `room_id`, `balcony`) VALUES
 
 CREATE TABLE `dependents` (
   `dep_id` int(11) NOT NULL,
-  `dep_email` varchar(32) NOT NULL,
-  `dep_phone` int(10) NOT NULL,
-  `f_name` varchar(20) NOT NULL,
-  `l_name` varchar(20) NOT NULL,
+  `dep_name` varchar(20) NOT NULL,
   `passport_no` int(11) NOT NULL,
-  `country` varchar(20) NOT NULL,
-  `dob` date NOT NULL,
   `cust_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dependents`
+--
+
+INSERT INTO `dependents` (`dep_id`, `dep_name`, `passport_no`, `cust_id`) VALUES
+(17, 'a b', 489, 1),
+(18, 'b c', 945, 3);
 
 -- --------------------------------------------------------
 
@@ -416,8 +419,6 @@ ALTER TABLE `deluxe`
 --
 ALTER TABLE `dependents`
   ADD PRIMARY KEY (`dep_id`),
-  ADD UNIQUE KEY `depemail` (`dep_email`),
-  ADD UNIQUE KEY `depphone` (`dep_phone`),
   ADD UNIQUE KEY `passdep` (`passport_no`),
   ADD UNIQUE KEY `custid` (`cust_id`);
 
@@ -517,7 +518,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `dependents`
 --
 ALTER TABLE `dependents`
-  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `employee`
