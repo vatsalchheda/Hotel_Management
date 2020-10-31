@@ -33,18 +33,18 @@ $query="SELECT $the_room_category.room_id FROM $the_room_category JOIN rooms ON 
     }
 
 if($the_room_category=="simple"){
-    $amount="5000";
+    $total_amt="5000";
 }
 
 if($the_room_category=="deluxe"){
-    $amount="10000";
+    $total_amt="10000";
 }
 
 if($the_room_category=="suite"){
-    $amount="15000";
+    $total_amt="15000";
 }
 
-$total=$amount*(ceil((strtotime($check_out)-strtotime($check_in))/86400));
+$total_amt=$total_amt*(ceil((strtotime($check_out)-strtotime($check_in))/86400));
 
 if(isset($_POST['add_booking'])){
 	$f_name=$_POST['f_name'];
@@ -91,15 +91,17 @@ if(isset($_POST['add_booking'])){
 	  	$create_query=mysqli_query($con,$query);
 		confirm($create_query);
 
-		$query="INSERT INTO dependents(cust_id, dep_name, passport_no) VALUES('{$the_cust_id}', '{$dep_name}', '{$dep_id}')";
-	  	$create_query=mysqli_query($con,$query);
-		confirm($create_query);
+		if(isset($_POST['dep_name'])) {
+			$query="INSERT INTO dependents(cust_id, dep_name, passport_no) VALUES('{$the_cust_id}', '{$dep_name}', '{$dep_id}')";
+	  		$create_query=mysqli_query($con,$query);
+			confirm($create_query);
+		}
 
 		$query="INSERT INTO booking(cust_id, Booking_id, room_id, branch_id) VALUES('{$the_cust_id}', '{$booking_id}', '{$room_id}', '{$branch_id}')";
 	  	$create_query=mysqli_query($con,$query);
 		confirm($create_query);
 
-		$query="INSERT INTO bill(cust_id, Bill_id, Amount, Payment_type) VALUES('{$the_cust_id}', '{$bill_id}', '{$total}', '{$payment_type}')";
+		$query="INSERT INTO bill(cust_id, Bill_id, Amount, Payment_type) VALUES('{$the_cust_id}', '{$bill_id}', '{$total_amt}', '{$payment_type}')";
 	  	$create_query=mysqli_query($con,$query);
 		confirm($create_query);
 
@@ -459,7 +461,7 @@ if(isset($_POST['add_booking'])){
 							<div class="form-btn">
 								<input type="submit" class="submit-btn" name="add_booking" value="Book Now">
 							</div>
-							<h2 id="totalAmount"><?php echo "Total Amount- &#x20B9 {$total}" ?></h2>
+							<h2 id="totalAmount"><?php echo "Total Amount- &#x20B9 {$total_amt}" ?></h2>
 							<div class="timer">
    								<time id="countdown">Session will expire in 5:00</time>
 							</div>
