@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 31, 2020 at 05:53 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.2.31
+-- Host: localhost
+-- Generation Time: Oct 31, 2020 at 09:57 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,8 @@ CREATE TABLE `bill` (
 
 INSERT INTO `bill` (`Bill_id`, `Amount`, `Payment_type`, `cust_id`) VALUES
 (1, 123, NULL, 1),
-(2, 456, NULL, 2);
+(2, 456, NULL, 2),
+(304027, 30000, 'Card', 4);
 
 -- --------------------------------------------------------
 
@@ -62,6 +63,7 @@ CREATE TABLE `booking` (
 INSERT INTO `booking` (`Booking_id`, `cust_id`, `room_id`, `branch_id`) VALUES
 (1, 1, 1, 1),
 (2, 2, 3, 1),
+(36941, 4, 4, 1),
 (86423, 3, 3, 1);
 
 -- --------------------------------------------------------
@@ -75,7 +77,7 @@ CREATE TABLE `customer` (
   `f_name` varchar(20) NOT NULL,
   `l_name` varchar(20) NOT NULL,
   `cust_email` varchar(32) NOT NULL,
-  `cust_phone` int(10) NOT NULL,
+  `cust_phone` varchar(10) NOT NULL,
   `passport_no` int(11) NOT NULL,
   `dob` date NOT NULL,
   `country` varchar(20) NOT NULL
@@ -86,9 +88,10 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `f_name`, `l_name`, `cust_email`, `cust_phone`, `passport_no`, `dob`, `country`) VALUES
-(1, 'John', 'Doe', 'cust1@example.com', 987654321, 987654321, '2020-10-22', 'India'),
-(2, 'Jane', 'Doe', 'cust2@example.com', 123456789, 1234567899, '2020-10-07', 'Germany'),
-(3, 'Simr(a)n', 'Gupta', 'abc@xyz.com', 1234509876, 123456, '2020-10-01', 'India');
+(1, 'John', 'Doe', 'cust1@example.com', '987654321', 987654321, '2020-10-22', 'India'),
+(2, 'Jane', 'Doe', 'cust2@example.com', '123456789', 1234567899, '2020-10-07', 'Germany'),
+(3, 'Simr(a)n', 'Gupta', 'abc@xyz.com', '1234509876', 123456, '2020-10-01', 'India'),
+(4, 'munna ', 'tripathi', 'munna@king.com', '9898989898', 6569, '2020-10-02', 'india');
 
 -- --------------------------------------------------------
 
@@ -129,7 +132,8 @@ CREATE TABLE `dependents` (
 
 INSERT INTO `dependents` (`dep_id`, `dep_name`, `passport_no`, `cust_id`) VALUES
 (17, 'a b', 489, 1),
-(18, 'b c', 945, 3);
+(18, 'b c', 945, 3),
+(19, 'lodu lalit', 77, 4);
 
 -- --------------------------------------------------------
 
@@ -178,7 +182,8 @@ CREATE TABLE `forr` (
 INSERT INTO `forr` (`Booking_id`, `room_id`, `check_in_date`, `check_out_date`) VALUES
 (1, 1, '2020-10-14', '2020-10-22'),
 (2, 3, '2020-10-23', '2020-10-29'),
-(86423, 3, '2020-11-01', '2020-11-07');
+(86423, 3, '2020-11-01', '2020-11-07'),
+(36941, 4, '2020-10-31', '2020-11-03');
 
 -- --------------------------------------------------------
 
@@ -198,7 +203,8 @@ CREATE TABLE `generates` (
 
 INSERT INTO `generates` (`Booking_id`, `Bill_id`, `booking_date`) VALUES
 (1, 1, '2020-10-01 00:00:00'),
-(2, 2, '2020-10-09 00:00:00');
+(2, 2, '2020-10-09 00:00:00'),
+(36941, 304027, '2020-10-31 09:27:19');
 
 -- --------------------------------------------------------
 
@@ -518,7 +524,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `dependents`
 --
 ALTER TABLE `dependents`
-  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `employee`
