@@ -16,7 +16,7 @@ include "db.php";
     <link rel="stylesheet" href="Search.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
-    <title>Sun of Beach</title>
+    <title>Search</title>
 
 </head>
 <body>
@@ -89,7 +89,7 @@ include "db.php";
         <div class="card__side card__side--front-1">
           <div class="card__title card__title--1">
             <div class="Room_Container">
-              <div class="Room_Image Room_Column">
+              <div class="Room_Image Room_Column Room_1">
               </div> 
               <div class="Room_Column"> 
                  <p><i class="fas fa-coffee"></i>Breakfast</p>
@@ -124,7 +124,7 @@ include "db.php";
         <div class="card__side card__side--front-2">
           <div class="card__title card__title--2">
           <div class="Room_Container">
-            <div class="Room_Image Room_Column">
+            <div class="Room_Image Room_Column Room_2">
             </div> 
             <div class="Room_Column"> 
                <p><i class="fas fa-star"></i>Perks of Simple Included</p>
@@ -159,7 +159,7 @@ include "db.php";
         <div class="card__side card__side--front-3">
           <div class="card__title card__title--3">
           <div class="Room_Container">
-            <div class="Room_Image Room_Column">
+            <div class="Room_Image Room_Column Room_3">
             </div> 
             <div class="Room_Column"> 
                <p><i class="fas fa-star"></i>Perks of Deluxe Included</p>

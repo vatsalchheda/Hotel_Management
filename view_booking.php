@@ -39,7 +39,7 @@ if(isset($_POST['search'])){
   <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="Search.css" />
   <link rel="stylesheet" href="./css/style.css" />
-  <title>Sun of Beach</title>
+  <title>View Booking</title>
 
 </head>
 <body>

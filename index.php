@@ -6,7 +6,7 @@ include('db.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SUN OF BEACH HOTELS</title>
+<title>Sun of Beach Hotels</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -111,7 +111,7 @@ include('db.php');
 <!-- //Modal1 -->
 <div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
-	<a href="admin/reservation.php"><h2>ROOM RESERVATION</h2></a>
+	<a href="search.php"><h2>ROOM RESERVATION</h2></a>
 </div>
 
 			<div class="clearfix"> </div>
@@ -210,16 +210,16 @@ include('db.php');
 			<div id="horizontalTab">
 					<ul class="resp-tabs-list">
 					<li>
-						<img src="images/teams1.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
+						<img src="images/simrn.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teams2.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
+						<img src="images/uditi.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teams3.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
+						<img src="images/vanshay.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					<li>
-						<img src="images/teams4.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
+						<img src="images/vatsal.jpg" style="width:120px; height:120px;" alt=" " class="img-responsive" />
 					</li>
 					</ul>
 					<div class="resp-tabs-container">
@@ -228,7 +228,7 @@ include('db.php');
 						</div>
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Simrn Gupta</h4>
-							<span>COO, SON OF BEACH</span>
+							<span>COO, SUN OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
@@ -245,7 +245,7 @@ include('db.php');
 						</div>
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Uditi Namdev</h4>
-							<span>CFO, SON OF BEACH</span>
+							<span>CFO, SUN OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>	
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
@@ -262,7 +262,7 @@ include('db.php');
 						</div>
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Vanshay Gupta</h4>
-							<span>CTO, SON OF BEACH</span>
+							<span>CTO, SUN OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
@@ -279,7 +279,7 @@ include('db.php');
 						</div>
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Vatsal Chheda</h4>
-							<span>CEO, SON OF BEACH</span>
+							<span>CEO, SUN OF BEACH</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
