@@ -61,21 +61,7 @@
                             
                             <input type="submit" name="sub" value="Send Now" style="background-color:#e35e0a; border-color:rgb(255,255,255,0.5)" class="btn btn-primary">	
                         </form>
-                        <?php
-                        if(isset($_POST['sub']))
-                        {
-                            $name =$_POST['name'];
-                            $phone = $_POST['phone'];
-                            $email = $_POST['email'];
-                            $approval = "Not Allowed";
-                            $sql = "INSERT INTO `contact`(`fullname`, `phoneno`, `email`,`cdate`,`approval`) VALUES ('$name','$phone','$email',now(),'$approval')" ;
-                            
-                            
-                            if(mysqli_query($con,$sql))
-                            echo"OK";
-                            
-                        }
-                        ?>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">

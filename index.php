@@ -229,7 +229,7 @@ include('db.php');
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Simrn Gupta</h4>
 							<span>COO, SUN OF BEACH</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
+							<p>Tum chane cooker me chadake mere paas aayi thi tab rasode me kaun tha. Waha tum thi, main thi, tum thi main thi kaun tha. Wo Rashi thi, cooker me se chane nikal diye aur khali cooker gas par chada diya.</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
@@ -246,7 +246,7 @@ include('db.php');
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Uditi Namdev</h4>
 							<span>CFO, SUN OF BEACH</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>	
+							<p>What is this behaviour Pooja. I'm sorry I kicked it by mistake. You can pick it up if it bothers you. You do not tell me what to do. Do you want it? Cause you're asking for it. You're dying for it. Get off my back.</p>	
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
@@ -263,7 +263,7 @@ include('db.php');
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Vanshay Gupta</h4>
 							<span>CTO, SUN OF BEACH</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
+							<p>It began with the forging of the Great Rings. Deep in the land of Mordor, in the Fires of Mount Doom, the Dark Lord Sauron forged a master ring, and into this ring he poured his cruelty, his malice and his will to dominate all life.</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
@@ -280,7 +280,7 @@ include('db.php');
 						<div class="col-md-6 team-Info-agileits">
 							<h4>Vatsal Chheda</h4>
 							<span>CEO, SUN OF BEACH</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
+							<p>Narcissist. Live like me or don't live.Six month past I came this Glamour hindi new and megzine. It was like Biggini shoot.Which Shoot? Biggni Shoot. Casual friend the, phir best friend hogaye, ache friend ho gaye phir love start ho gaya. Two pieces only.</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
 								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
