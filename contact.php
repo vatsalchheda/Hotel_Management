@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SUN OF BEACH HOTELS</title>
+        <title>Contact Us</title>
         <!-- for-mobile-apps -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -80,9 +80,9 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
                     <h4 style="color:#df5506">Connect With Us</h4>
-                    <p class="contact-agile1"><strong>Phone :</strong>(+91) 22 2224 4555</p>
-                    <p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@SUNOFBEACH.COM</a></p>
-                    <p class="contact-agile1"><strong>Address :</strong> Bala Sahani Road, Mumbai, India</p>
+                    <p class="contact-agile1"><strong>Phone :</strong>+912242335000</p>
+                    <p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">info@.sunofbeach.com</a></p>
+                    <p class="contact-agile1"><strong>Address :</strong> No. U-15, J.V.P.D. Scheme, Bhaktivedanta Swami Rd, Opp.Cooper Hospital, Vile Parle, Mumbai, Maharashtra 400056</p>
                                                                         
                     <div class="social-bnr-agileits footer-icons-agileinfo">
                         <ul class="social-icons3">
@@ -92,7 +92,7 @@
                                         
                                     </ul>
                     </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7905052320443!2d-77.84987248482734!3d39.586871613613056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9f6a80ccf0661%3A0x7210426c67abc40!2sVirginia+Welcome+Center%2FSafety+Rest+Area!5e0!3m2!1sen!2sin!4v1485760915662" ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15080.05015075494!2d72.8371074!3d19.1071059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75f29a4205098f99!2sDwarkadas%20Jivanlal%20Sanghvi%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1604118279002!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="clearfix"></div>
             </div>
