@@ -15,7 +15,7 @@ include "db.php";
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="Search.css" />
     <link rel="stylesheet" href="./css/style.css" />
-
+    <link rel="icon" href="images/icon.jpg">
     <title>Search</title>
 
 </head>

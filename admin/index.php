@@ -10,11 +10,9 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Sun of Beach Admin</title>
-  
-  
-     
-      <link rel="stylesheet" href="css/style.css">
+  <title>Sun of Beach Admin</title>  
+    <link rel="icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/style.css">
 
   
 </head>

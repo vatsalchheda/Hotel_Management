@@ -15,7 +15,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hotel Management Admin</title>
+    <title>Sun of Beach Admin</title>
+    <link rel="icon" href="../images/icon.jpg">
 
     <!-- Bootstrap Core CSS -->  
     <link href="css/bootstrap.min.css" rel="stylesheet">

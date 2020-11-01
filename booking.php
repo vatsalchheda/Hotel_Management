@@ -129,7 +129,7 @@ if(isset($_POST['add_booking'])){
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" href="./css/style.css" />
-		
+		<link rel="icon" href="images/icon.jpg">
 
 <style>
 	.section {

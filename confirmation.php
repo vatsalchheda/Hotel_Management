@@ -99,6 +99,7 @@ $query = "SELECT * FROM customer WHERE cust_id='{$cust_id}'";
 		<link rel="stylesheet" href="style.css">
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+		<link rel="icon" href="images/icon.jpg">
 		<script src="script.js"></script>
 		<style>
 		/* reset */
