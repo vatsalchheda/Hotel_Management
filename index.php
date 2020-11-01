@@ -27,6 +27,7 @@ include('db.php');
 <link href="//fonts.googleapis.com/css?family=Federo" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 <!--//fonts-->
+<link rel="icon" href="images/icon.jpg">
 </head>
 <body>
 <!-- header -->
@@ -422,7 +423,7 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
-								Worth to come again
+								Worth coming again
 								</h4>
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
@@ -446,7 +447,7 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Worth coming again
 								</h4>
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
@@ -470,12 +471,12 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Worth coming again
 								</h4>
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Munna Tripthi</h5>
+								<h5>Munna Tripathi</h5>
 								<p>Italy</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -492,9 +493,9 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
-								<i class="fa fa-star-o" aria-hidden="true"></i>
-								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								Worth coming again
 								</h4>
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
