@@ -428,7 +428,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Sartaj Singh</h5>
+								<h5>Sarita Singh</h5>
 								<p>Germany</p>
 							</div>
 							<div class="clearfix"> </div>
@@ -476,7 +476,7 @@ include('db.php');
 								<p>Sed tempus vestibulum lacus blandit faucibus. 
 									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
 									at imperdiet urna. </p>
-								<h5>Munna Tripathi</h5>
+								<h5>Munni Tripathi</h5>
 								<p>Italy</p>
 							</div>
 							<div class="clearfix"> </div>
