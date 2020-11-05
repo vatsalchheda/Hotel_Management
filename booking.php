@@ -67,29 +67,39 @@ if(isset($_POST['add_booking'])){
     	}		
 	}
 
-	$query="SELECT * FROM customer WHERE cust_id=(SELECT MAX(cust_id) FROM customer)";
-	$select_cust_id=mysqli_query($con, $query);
-    while($row=mysqli_fetch_assoc($select_cust_id)){
-        $the_cust_id=$row['cust_id'];
-  	}
-
-    $the_cust_id=$the_cust_id+1;
-
     $booking_id = substr(str_shuffle(str_repeat("0123456789", 5)), 0, 5);
     $bill_id = substr(str_shuffle(str_repeat("0123456789", 6)), 0, 6);
     $booking_date = date('Y-m-d H:i:s');
 
-    $query="SELECT * FROM customer WHERE cust_id='{$the_cust_id}' OR cust_email='{$cust_email}' OR cust_phone='{$cust_phone}' OR passport_no='{$passport_no}'";
+    $query="SELECT * FROM customer WHERE f_name='{$f_name}' AND l_name='${l_name}' AND country='{$country}' AND dob='{$dob}' AND cust_email='{$cust_email}' AND cust_phone='{$cust_phone}' AND passport_no='{$passport_no}'";
     $duplicate=mysqli_query($con, $query);
     if (mysqli_num_rows($duplicate) != 0){
-    	$warning="Please enter the correct values";
-      	echo "<script>alert('$warning')</script>";
+    	while($row=mysqli_fetch_assoc($duplicate)){
+        	$the_cust_id=$row['cust_id'];
+        	$cust_exists=true;
+  		}
+    }
+    else {
+    	$query="SELECT * FROM customer WHERE cust_email='{$cust_email}' OR cust_phone='{$cust_phone}' OR passport_no='{$passport_no}'";
+	    $duplicate=mysqli_query($con, $query);
+    	if (mysqli_num_rows($duplicate) != 0){
+    		$warning="Please enter the correct values";
+      		echo "<script>alert('$warning')</script>";
+    	}
     }
 
    if(!isset($warning)){ 
-		$query="INSERT INTO customer(cust_id, cust_email, cust_phone, passport_no, country, dob, f_name, l_name) VALUES('{$the_cust_id}', '{$cust_email}', '{$cust_phone}', '{$passport_no}', '{$country}', '{$dob}', '{$f_name}', '{$l_name}')";
-	  	$create_query=mysqli_query($con,$query);
-		confirm($create_query);
+   		if($cust_exists==false) {
+   			$query="SELECT * FROM customer WHERE cust_id=(SELECT MAX(cust_id) FROM customer)";
+			$select_cust_id=mysqli_query($con, $query);
+    		while($row=mysqli_fetch_assoc($select_cust_id)){
+        		$the_cust_id=$row['cust_id'];
+  			}
+    		$the_cust_id=$the_cust_id+1;
+    		$query="INSERT INTO customer(cust_id, cust_email, cust_phone, passport_no, country, dob, f_name, l_name) VALUES('{$the_cust_id}', '{$cust_email}', '{$cust_phone}', '{$passport_no}', '{$country}', '{$dob}', '{$f_name}', '{$l_name}')";
+	  		$create_query=mysqli_query($con,$query);
+			confirm($create_query);
+   		}
 
 		if(isset($_POST['dep_name'])) {
 			$query="INSERT INTO dependents(cust_id, dep_name, passport_no) VALUES('{$the_cust_id}', '{$dep_name}', '{$dep_id}')";
