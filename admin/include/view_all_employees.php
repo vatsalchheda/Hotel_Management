@@ -6,7 +6,8 @@
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>emp_dob</th>
+            <th>DOB</th>
+            <th>Branch</th>
             <th>Specialization</th>
             <th>Salary</th>
             <th>Delete</th>
@@ -24,6 +25,13 @@
             $f_name=$row['f_name'];
             $l_name=$row['l_name'];
             $emp_dob=$row['emp_dob'];
+            $branch_id=$row['branch_id'];
+            $query = "SELECT * FROM hotel WHERE branch_id={$branch_id}";
+                $select_category=mysqli_query($con, $query);
+                 while($row=mysqli_fetch_assoc($select_category)){
+                    $branch_name=$row['branch_name'];
+                }
+
             $query = "SELECT * FROM manager WHERE emp_id={$emp_id}";
                 $select_category=mysqli_query($con, $query);
                  while($row=mysqli_fetch_assoc($select_category)){
@@ -53,6 +61,7 @@
             echo "<td>{$emp_email}</td>";
             echo "<td>{$emp_phone}</td>";
             echo "<td>{$emp_dob}</td>";
+            echo "<td>{$branch_name}</td>";
             echo "<td>{$specialization}</td>";
             echo "<td>{$salary}</td>";
             echo "<td><a href='employees.php?delete={$emp_id}'>Delete</a></td>";
