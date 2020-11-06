@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 31, 2020 at 09:57 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Host: 127.0.0.1
+-- Generation Time: Nov 06, 2020 at 08:31 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.2.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,9 +39,17 @@ CREATE TABLE `bill` (
 --
 
 INSERT INTO `bill` (`Bill_id`, `Amount`, `Payment_type`, `cust_id`) VALUES
-(1, 123, NULL, 1),
-(2, 456, NULL, 2),
-(304027, 30000, 'Card', 4);
+(164213, 75000, 'Cash', 3),
+(261472, 80000, 'Net Banking', 6),
+(309808, 50000, 'Cash', 10),
+(330458, 15000, 'Card', 4),
+(591417, 120000, 'Card', 9),
+(598328, 10000, 'Card', 7),
+(641069, 70000, 'Net Banking', 2),
+(643305, 60000, 'Card', 4),
+(807517, 30000, 'Cash', 5),
+(918964, 30000, 'Card', 1),
+(987147, 50000, 'Net Banking', 8);
 
 -- --------------------------------------------------------
 
@@ -61,10 +69,17 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`Booking_id`, `cust_id`, `room_id`, `branch_id`) VALUES
-(1, 1, 1, 1),
-(2, 2, 3, 1),
-(36941, 4, 4, 1),
-(86423, 3, 3, 1);
+(14048, 1, 1, 1),
+(30903, 4, 13, 4),
+(34526, 6, 2, 1),
+(48482, 3, 11, 3),
+(59026, 10, 14, 4),
+(79455, 8, 6, 2),
+(79664, 2, 6, 2),
+(85712, 7, 17, 5),
+(87317, 9, 11, 3),
+(87430, 4, 4, 1),
+(93467, 5, 17, 5);
 
 -- --------------------------------------------------------
 
@@ -88,10 +103,16 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `f_name`, `l_name`, `cust_email`, `cust_phone`, `passport_no`, `dob`, `country`) VALUES
-(1, 'John', 'Doe', 'cust1@example.com', '987654321', 987654321, '2020-10-22', 'India'),
-(2, 'Jane', 'Doe', 'cust2@example.com', '123456789', 1234567899, '2020-10-07', 'Germany'),
-(3, 'Simr(a)n', 'Gupta', 'abc@xyz.com', '1234509876', 123456, '2020-10-01', 'India'),
-(4, 'munna ', 'tripathi', 'munna@king.com', '9898989898', 6569, '2020-10-02', 'india');
+(1, 'Cust', 'One', 'cust1@example.com', '9472539316', 28613062, '1976-08-17', 'India'),
+(2, 'Cust', 'Two', 'cust2@example.com', '9247133882', 65251961, '1995-09-17', 'Germany'),
+(3, 'Cust', 'Three', 'cust3@example.com', '9815855215', 88212946, '1983-06-09', 'France'),
+(4, 'Cust', 'Four', 'cust4@example.com', '9195734365', 95803646, '1972-09-12', 'USA'),
+(5, 'Cust', 'Five', 'cust5@example.com', '9691651979', 35602713, '1990-09-18', 'England'),
+(6, 'Cust', 'Six', 'cust6@example.com', '9539121989', 91038490, '1996-03-02', 'India'),
+(7, 'Cust', 'Seven', 'cust7@example.com', '9944060300', 57189991, '1873-03-30', 'Japan'),
+(8, 'Cust', 'Eight', 'cust8@example.com', '9585155161', 74358552, '1988-06-15', 'Canada'),
+(9, 'Cust', 'Nine', 'cust9@example.com', '9419409140', 63576209, '1987-07-05', 'Mexico'),
+(10, 'Cust', 'Ten', 'cust10@example.com', '9256405680', 25649177, '1979-09-19', 'Singapore');
 
 -- --------------------------------------------------------
 
@@ -110,8 +131,13 @@ CREATE TABLE `deluxe` (
 --
 
 INSERT INTO `deluxe` (`wifi`, `room_id`, `balcony`) VALUES
-('', 3, 0),
-('', 4, 0);
+('75006', 2, 1),
+('25964', 6, 1),
+('74962', 7, 1),
+('15606', 10, 1),
+('77672', 14, 0),
+('94621', 15, 1),
+('15328', 19, 1);
 
 -- --------------------------------------------------------
 
@@ -131,9 +157,11 @@ CREATE TABLE `dependents` (
 --
 
 INSERT INTO `dependents` (`dep_id`, `dep_name`, `passport_no`, `cust_id`) VALUES
-(17, 'a b', 489, 1),
-(18, 'b c', 945, 3),
-(19, 'lodu lalit', 77, 4);
+(21, 'Dep One', 76532591, 1),
+(22, 'Dep Two', 42907680, 3),
+(23, 'Dep Three', 46529314, 5),
+(24, 'Dep Four', 2147483647, 7),
+(25, 'Dep Five', 67767299, 9);
 
 -- --------------------------------------------------------
 
@@ -156,11 +184,16 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`emp_id`, `l_name`, `f_name`, `emp_email`, `emp_phone`, `emp_dob`, `branch_id`) VALUES
-(5, '1', 'Emp', 'emp1@example.com', '123456789', '2020-10-01', 1),
-(6, '2', 'Emp', 'emp2@example.com', '987654321', '2020-10-22', 2),
-(7, '3', 'Emp', 'emp3@example.com', '1234564321', '2020-10-08', 1),
-(8, '4', 'Emp', 'emp4@example.com', '3213213225', '0000-00-00', 1),
-(9, '5', 'Emp', 'emp5@example.com', '5454354312', '0000-00-00', 2);
+(5, '1', 'Emp', 'emp1@example.com', '9428267803', '1997-10-22', 1),
+(6, '2', 'Emp', 'emp2@example.com', '9862398547', '1994-10-22', 2),
+(7, '3', 'Emp', 'emp3@example.com', '9707219245', '1993-10-08', 1),
+(8, '4', 'Emp', 'emp4@example.com', '9123815830', '1987-03-12', 1),
+(9, '5', 'Emp', 'emp5@example.com', '9299213278', '1973-04-18', 2),
+(27, '6', 'Emp', 'emp6@example.com', '9426666527', '1983-07-20', 3),
+(28, '7', 'Emp', 'emp7@example.com', '9846422072', '1980-10-14', 4),
+(29, '8', 'Emp', 'emp8@example.com', '9674400102', '1976-01-13', 5),
+(30, '9', 'Emp', 'emp9@example.com', '9420814767', '1984-06-14', 5),
+(31, '10', 'Emp', 'emp10@example.com', '9016777844', '1986-11-17', 4);
 
 -- --------------------------------------------------------
 
@@ -180,10 +213,17 @@ CREATE TABLE `forr` (
 --
 
 INSERT INTO `forr` (`Booking_id`, `room_id`, `check_in_date`, `check_out_date`) VALUES
-(1, 1, '2020-10-14', '2020-10-22'),
-(2, 3, '2020-10-23', '2020-10-29'),
-(86423, 3, '2020-11-01', '2020-11-07'),
-(36941, 4, '2020-10-31', '2020-11-03');
+(14048, 1, '2020-11-13', '2020-11-19'),
+(79664, 6, '2020-11-11', '2020-11-18'),
+(48482, 11, '2020-11-19', '2020-11-24'),
+(30903, 13, '2020-11-17', '2020-11-20'),
+(93467, 17, '2020-11-24', '2020-11-30'),
+(34526, 2, '2020-11-10', '2020-11-18'),
+(85712, 17, '2020-11-18', '2020-11-20'),
+(79455, 6, '2020-11-25', '2020-11-30'),
+(87317, 11, '2020-11-17', '2020-11-25'),
+(59026, 14, '2020-11-26', '2020-12-01'),
+(87430, 4, '2020-11-18', '2020-11-22');
 
 -- --------------------------------------------------------
 
@@ -202,9 +242,17 @@ CREATE TABLE `generates` (
 --
 
 INSERT INTO `generates` (`Booking_id`, `Bill_id`, `booking_date`) VALUES
-(1, 1, '2020-10-01 00:00:00'),
-(2, 2, '2020-10-09 00:00:00'),
-(36941, 304027, '2020-10-31 09:27:19');
+(14048, 918964, '2020-11-06 19:54:24'),
+(79664, 641069, '2020-11-06 19:55:32'),
+(48482, 164213, '2020-11-06 19:57:40'),
+(30903, 330458, '2020-11-06 19:59:14'),
+(93467, 807517, '2020-11-06 20:00:48'),
+(34526, 261472, '2020-11-06 20:02:06'),
+(85712, 598328, '2020-11-06 20:03:53'),
+(79455, 987147, '2020-11-06 20:05:42'),
+(87317, 591417, '2020-11-06 20:07:16'),
+(59026, 309808, '2020-11-06 20:09:06'),
+(87430, 643305, '2020-11-06 20:21:05');
 
 -- --------------------------------------------------------
 
@@ -216,7 +264,7 @@ CREATE TABLE `hotel` (
   `branch_id` int(11) NOT NULL,
   `branch_name` varchar(20) DEFAULT NULL,
   `location` varchar(20) DEFAULT NULL,
-  `branch_phone` int(11) DEFAULT NULL
+  `branch_phone` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -224,8 +272,11 @@ CREATE TABLE `hotel` (
 --
 
 INSERT INTO `hotel` (`branch_id`, `branch_name`, `location`, `branch_phone`) VALUES
-(1, 'Mumbai', 'Mumbai', NULL),
-(2, 'Bangalore', 'Bangalore', NULL);
+(1, 'Mumbai', 'Mumbai', '9321398682'),
+(2, 'Bangalore', 'Bangalore', '9595671915'),
+(3, 'New Delhi', 'New Delhi', '9835459247'),
+(4, 'Guwahati', 'Guwahati', '9244453602'),
+(5, 'Kolkata', 'Kolkata', '9917056680');
 
 -- --------------------------------------------------------
 
@@ -244,8 +295,9 @@ CREATE TABLE `kitchen_staff` (
 --
 
 INSERT INTO `kitchen_staff` (`salary`, `expertise`, `emp_id`) VALUES
-(1234, 'abcd', 5),
-(456, 'cde', 7);
+(785628, 'Chef', 5),
+(896113, 'Waiter', 7),
+(640570, 'Assistant', 30);
 
 -- --------------------------------------------------------
 
@@ -268,7 +320,8 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`) VALUES
-(1, 'Admin', '1234', 'Admin', '1', 'a@b.c', '0_Screen-Shot-2020-09-02-at-190424.jpg');
+(1, 'Admin', '1234', 'User', '1', 'user1@example.com', '0_Screen-Shot-2020-09-02-at-190424.jpg'),
+(3, 'User', '1234', 'User', '2', 'user2@example.com', 'deathly_hallows_by_ipat7-d4nnl3n.jpg');
 
 -- --------------------------------------------------------
 
@@ -287,8 +340,8 @@ CREATE TABLE `manager` (
 --
 
 INSERT INTO `manager` (`dept_name`, `salary`, `emp_id`) VALUES
-('a', 789, 6),
-('b', 654, 8);
+('Technical', 764384, 6),
+('Accounts', 310918, 8);
 
 -- --------------------------------------------------------
 
@@ -307,7 +360,8 @@ CREATE TABLE `receptionist` (
 --
 
 INSERT INTO `receptionist` (`salary`, `counter_no`, `emp_id`) VALUES
-(456, 1, 9);
+(895109, 1, 9),
+(475483, 3, 29);
 
 -- --------------------------------------------------------
 
@@ -317,22 +371,35 @@ INSERT INTO `receptionist` (`salary`, `counter_no`, `emp_id`) VALUES
 
 CREATE TABLE `rooms` (
   `room_id` int(11) NOT NULL,
-  `cust_id` int(11) DEFAULT NULL,
   `branch_id` int(11) DEFAULT NULL,
-  `Booking_id` int(11) DEFAULT NULL
+  `room_no` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `rooms`
 --
 
-INSERT INTO `rooms` (`room_id`, `cust_id`, `branch_id`, `Booking_id`) VALUES
-(1, NULL, 1, NULL),
-(2, NULL, 2, NULL),
-(3, NULL, 1, NULL),
-(4, NULL, 1, NULL),
-(5, NULL, 2, NULL),
-(6, NULL, 1, NULL);
+INSERT INTO `rooms` (`room_id`, `branch_id`, `room_no`) VALUES
+(1, 1, '1A'),
+(2, 1, '2A'),
+(3, 1, '1B'),
+(4, 1, '3A'),
+(5, 2, '1A'),
+(6, 2, '2A'),
+(7, 2, '2B'),
+(8, 2, '3A'),
+(9, 3, '1A'),
+(10, 3, '2A'),
+(11, 3, '3A'),
+(12, 3, '3B'),
+(13, 4, '1A'),
+(14, 4, '2A'),
+(15, 4, '2B'),
+(16, 4, '3A'),
+(17, 5, '1A'),
+(18, 5, '1B'),
+(19, 5, '2A'),
+(20, 5, '3A');
 
 -- --------------------------------------------------------
 
@@ -345,6 +412,15 @@ CREATE TABLE `room_service` (
   `floor` int(11) NOT NULL,
   `emp_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `room_service`
+--
+
+INSERT INTO `room_service` (`salary`, `floor`, `emp_id`) VALUES
+(275148, 2, 27),
+(249126, 3, 28),
+(592475, 1, 31);
 
 -- --------------------------------------------------------
 
@@ -362,8 +438,13 @@ CREATE TABLE `simple` (
 --
 
 INSERT INTO `simple` (`room_id`, `wifi`) VALUES
-(1, ''),
-(2, '');
+(1, '16867'),
+(3, '11610'),
+(5, '38718'),
+(9, '61591'),
+(13, '79081'),
+(17, '99467'),
+(18, '11848');
 
 -- --------------------------------------------------------
 
@@ -382,8 +463,12 @@ CREATE TABLE `suite` (
 --
 
 INSERT INTO `suite` (`wifi`, `room_id`, `jacuzzi`) VALUES
-('', 5, 0),
-('', 6, 0);
+('18141', 4, 1),
+('32698', 8, 1),
+('74325', 11, 1),
+('14704', 12, 0),
+('79042', 16, 1),
+('43685', 20, 1);
 
 --
 -- Indexes for dumped tables
@@ -456,7 +541,6 @@ ALTER TABLE `generates`
 --
 ALTER TABLE `hotel`
   ADD PRIMARY KEY (`branch_id`),
-  ADD UNIQUE KEY `branch_phone` (`branch_phone`),
   ADD UNIQUE KEY `branch_name` (`branch_name`);
 
 --
@@ -488,9 +572,7 @@ ALTER TABLE `receptionist`
 --
 ALTER TABLE `rooms`
   ADD PRIMARY KEY (`room_id`),
-  ADD KEY `cust_id` (`cust_id`),
-  ADD KEY `branch_id` (`branch_id`),
-  ADD KEY `Bookingid` (`Booking_id`);
+  ADD KEY `branch_id` (`branch_id`);
 
 --
 -- Indexes for table `room_service`
@@ -518,31 +600,31 @@ ALTER TABLE `suite`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `dependents`
 --
 ALTER TABLE `dependents`
-  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `employee`
 --
 ALTER TABLE `employee`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `hotel`
 --
 ALTER TABLE `hotel`
-  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -616,8 +698,6 @@ ALTER TABLE `receptionist`
 -- Constraints for table `rooms`
 --
 ALTER TABLE `rooms`
-  ADD CONSTRAINT `Bookingid` FOREIGN KEY (`Booking_id`) REFERENCES `booking` (`Booking_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `rooms_ibfk_1` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `rooms_ibfk_2` FOREIGN KEY (`branch_id`) REFERENCES `hotel` (`branch_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --

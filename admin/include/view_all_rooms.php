@@ -4,6 +4,7 @@
             <th>Room ID</th>
             <th>Branch</th>
             <th>Category</th>
+            <th>Room Number</th>
             <th>Wifi</th>
             <th>Delete</th>
         </tr>
@@ -15,6 +16,7 @@
         while($row=mysqli_fetch_assoc($select_rooms)){
             $room_id=$row['room_id'];
             $branch_id=$row['branch_id'];
+            $room_no=$row['room_no'];
             
             $query= "SELECT * FROM hotel WHERE branch_id={$branch_id}";
             $branch=mysqli_query($con, $query);
@@ -42,6 +44,7 @@
                     $wifi=$row['wifi'];
                 }
             echo "<td>{$category}</td>";
+            echo "<td>{$room_no}</td>";
             echo "<td>{$wifi}</td>";
             echo "<td><a href='rooms.php?delete={$room_id}'>Delete</a></td>";
             echo "</tr>";

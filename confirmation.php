@@ -89,6 +89,12 @@ $query = "SELECT * FROM customer WHERE cust_id='{$cust_id}'";
         $dob=$row['dob'];
 		$passport_no=$row['passport_no'];
 	}
+
+$query = "SELECT * FROM dependents WHERE cust_id='{$cust_id}'";
+    $select_bookings=mysqli_query($con, $query);
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $dep_name=$row['dep_name'];
+	}
 ?>
 
 <html>
@@ -331,6 +337,14 @@ tr:hover .cut { opacity: 1; }
 					<th><span>Phone Number : </span></th>
 					<td><span ><?php echo $cust_phone; ?></span></td>
 				</tr>
+				<?php 
+				if(isset($dep_name)) {
+					echo "<tr>";
+					echo "<th><span>Dependent Name: </span></th>";
+					echo "<td><span >$dep_name</span></td>";
+					echo "</tr>";
+				}
+				?>
 			</table>
 
 			<table class="inventory">

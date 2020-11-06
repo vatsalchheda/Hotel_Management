@@ -70,6 +70,9 @@ include "db.php";
                 <option value="">Select</option>
                 <option value="1">Mumbai</option>
                 <option value="2">Bangalore</option>
+                <option value="3">New Delhi</option>
+                <option value="4">Guwahati</option>
+                <option value="5">Kolkata</option>
             </select>
             <label>   Check In Date    </label>
             <input type="date" id="check_in" name="check_in" min='<?php echo date('Y-m-d');?>' required>

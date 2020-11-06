@@ -33,7 +33,7 @@ if(isset($_POST['update_user'])){
             $user_image=$row['user_image'];
         }
     }
-    $query="UPDATE login SET user_firstname ='{$user_firstname}', user_lastname ='{$user_lastname}', user_email ='{$user_email}', password ='{$password}', user_role ='{$user_role}', user_image ='{$user_image}' WHERE username ='{$username}'"; 
+    $query="UPDATE login SET user_firstname ='{$user_firstname}', user_lastname ='{$user_lastname}', user_email ='{$user_email}', password ='{$password}', user_image ='{$user_image}' WHERE username ='{$username}'"; 
 
     $update_user=mysqli_query($con,$query);
     if(!$update_user){

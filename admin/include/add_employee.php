@@ -43,7 +43,7 @@ if(isset($_POST['create_kitchen_staff'])){
 	$expertise=$_POST['expertise'];
 
 	$query="INSERT INTO employee(f_name, l_name, emp_email, emp_phone, emp_dob, branch_id)";
-	$query .="VALUES('{$f_name}', '{$l_name}', '{$emp_email}', '{$emp_phone},'{$emp_dob}', '{$branch_id}')";
+	$query .="VALUES('{$f_name}', '{$l_name}', '{$emp_email}', '{$emp_phone}', '{$emp_dob}', '{$branch_id}')";
 
 	$create_emp_query=mysqli_query($con,$query);
 	confirm($create_emp_query);
@@ -106,7 +106,7 @@ if(isset($_POST['create_room_service'])){
 	$branch_id=$_POST['branch_id'];
 	$floor=$_POST['floor'];
 
-	$query="INSERT INTO employee(f_name, l_name, emp_email, emp_phone emp_dob, branch_id)";
+	$query="INSERT INTO employee(f_name, l_name, emp_email, emp_phone, emp_dob, branch_id)";
 	$query .="VALUES('{$f_name}', '{$l_name}', '{$emp_email}', '{$emp_phone}', '{$emp_dob}', '{$branch_id}')";
 
 	$create_emp_query=mysqli_query($con,$query);
