@@ -47,7 +47,7 @@ include('db.php');
 
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>Gallery</h4>
+								<h4>Sun of Beach</h4>
 									<h3>We know what you love</h3>
 										<p>Welcome to our hotels</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -61,7 +61,7 @@ include('db.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top1">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>Gallery</h4>
+								<h4>Sun of Beach</h4>
 									<h3>Stay with friends & families</h3>
 										<p>Come & enjoy precious moment with us</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -75,7 +75,7 @@ include('db.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top2">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>Gallery</h4>
+								<h4>Sun of Beach</h4>
 								<h3>want luxurious vacation?</h3>
 										<p>Get accommodation today</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -162,7 +162,7 @@ include('db.php');
  	<div class="about-wthree" id="about">
 		  <div class="container">
 				   <div class="ab-w3l-spa">
-                            <h3 class="title-w3-agileits title-black-wthree">About Our SUN OF BEACH</h3> 
+                            <h3 class="title-w3-agileits title-black-wthree">About SUN OF BEACH</h3> 
 						   <p class="about-para-w3ls">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, at imperdiet urna</p>
 						   <img src="images/about.jpg" class="img-responsive" alt="Hair Salon">
 										<div class="w3l-slider-img">
