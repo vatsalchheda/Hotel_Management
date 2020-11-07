@@ -66,6 +66,9 @@ if(isset($_POST['update_emp'])){
 	$dob=$_POST['dob'];
 	$salary=$_POST['salary'];
 
+	$query="create trigger before_emp_update before update on employee for each row insert into emp_audit set emp_id=old.emp_id, f_name=old.f_name, l_name=old.l_name";
+	mysqli_query($con,$query);
+
 	$query="UPDATE employee SET f_name ='{$f_name}', l_name ='{$l_name}', emp_email ='{$emp_email}', emp_dob='{$dob}', emp_phone='{$emp_phone}' WHERE emp_id ={$the_emp_id}"; 
 
 	$update_emp=mysqli_query($con,$query);
