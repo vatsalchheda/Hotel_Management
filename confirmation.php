@@ -78,6 +78,12 @@ $select_bookings=mysqli_query($con, $query);
         $payment=$row['Payment_type'];
     }  
 
+$query= "SELECT * FROM rooms WHERE room_id='{$room_id}'";
+$select_bookings=mysqli_query($con, $query);
+    while($row=mysqli_fetch_assoc($select_bookings)){
+        $room_no=$row['room_no'];
+    }  
+
 $query = "SELECT * FROM customer WHERE cust_id='{$cust_id}'";
     $select_bookings=mysqli_query($con, $query);
     while($row=mysqli_fetch_assoc($select_bookings)){
@@ -311,6 +317,10 @@ tr:hover .cut { opacity: 1; }
 				<tr>
 					<th><span >Booking ID</span></th>
 					<td><span ><?php echo $booking_id; ?> </span></td>
+				</tr>	
+				<tr>
+					<th><span >Room Number</span></th>
+					<td><span ><?php echo $room_no; ?> </span></td>
 				</tr>	
 			</table>
 			
