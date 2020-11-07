@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2020 at 08:31 PM
+-- Generation Time: Nov 07, 2020 at 04:41 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.31
 
@@ -107,12 +107,41 @@ INSERT INTO `customer` (`cust_id`, `f_name`, `l_name`, `cust_email`, `cust_phone
 (2, 'Cust', 'Two', 'cust2@example.com', '9247133882', 65251961, '1995-09-17', 'Germany'),
 (3, 'Cust', 'Three', 'cust3@example.com', '9815855215', 88212946, '1983-06-09', 'France'),
 (4, 'Cust', 'Four', 'cust4@example.com', '9195734365', 95803646, '1972-09-12', 'USA'),
-(5, 'Cust', 'Five', 'cust5@example.com', '9691651979', 35602713, '1990-09-18', 'England'),
+(5, 'Cust', 'Five', 'cust5@example.com', '9691651979', 35602712, '1990-09-18', 'England'),
 (6, 'Cust', 'Six', 'cust6@example.com', '9539121989', 91038490, '1996-03-02', 'India'),
 (7, 'Cust', 'Seven', 'cust7@example.com', '9944060300', 57189991, '1873-03-30', 'Japan'),
 (8, 'Cust', 'Eight', 'cust8@example.com', '9585155161', 74358552, '1988-06-15', 'Canada'),
 (9, 'Cust', 'Nine', 'cust9@example.com', '9419409140', 63576209, '1987-07-05', 'Mexico'),
 (10, 'Cust', 'Ten', 'cust10@example.com', '9256405680', 25649177, '1979-09-19', 'Singapore');
+
+--
+-- Triggers `customer`
+--
+DELIMITER $$
+CREATE TRIGGER `before_cust_update` BEFORE UPDATE ON `customer` FOR EACH ROW insert into cust_audit set cust_id=old.cust_id, f_name=old.f_name, l_name=old.l_name
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cust_audit`
+--
+
+CREATE TABLE `cust_audit` (
+  `cust_id` int(11) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `cust_audit`
+--
+
+INSERT INTO `cust_audit` (`cust_id`, `f_name`, `l_name`) VALUES
+(5, 'Cust', 'Five'),
+(10, 'Cust', 'Ten'),
+(10, 'Cust', 'Tene');
 
 -- --------------------------------------------------------
 
@@ -194,6 +223,34 @@ INSERT INTO `employee` (`emp_id`, `l_name`, `f_name`, `emp_email`, `emp_phone`, 
 (29, '8', 'Emp', 'emp8@example.com', '9674400102', '1976-01-13', 5),
 (30, '9', 'Emp', 'emp9@example.com', '9420814767', '1984-06-14', 5),
 (31, '10', 'Emp', 'emp10@example.com', '9016777844', '1986-11-17', 4);
+
+--
+-- Triggers `employee`
+--
+DELIMITER $$
+CREATE TRIGGER `before_emp_update` BEFORE UPDATE ON `employee` FOR EACH ROW insert into emp_audit set emp_id=old.emp_id, f_name=old.f_name, l_name=old.l_name
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `emp_audit`
+--
+
+CREATE TABLE `emp_audit` (
+  `emp_id` int(11) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `emp_audit`
+--
+
+INSERT INTO `emp_audit` (`emp_id`, `f_name`, `l_name`) VALUES
+(7, 'Emp', '3'),
+(8, 'Emp', '4');
 
 -- --------------------------------------------------------
 
@@ -296,7 +353,7 @@ CREATE TABLE `kitchen_staff` (
 
 INSERT INTO `kitchen_staff` (`salary`, `expertise`, `emp_id`) VALUES
 (785628, 'Chef', 5),
-(896113, 'Waiter', 7),
+(896116, 'Waiter', 7),
 (640570, 'Assistant', 30);
 
 -- --------------------------------------------------------
@@ -341,7 +398,7 @@ CREATE TABLE `manager` (
 
 INSERT INTO `manager` (`dept_name`, `salary`, `emp_id`) VALUES
 ('Technical', 764384, 6),
-('Accounts', 310918, 8);
+('Accounts', 310919, 8);
 
 -- --------------------------------------------------------
 
@@ -600,13 +657,13 @@ ALTER TABLE `suite`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `dependents`
 --
 ALTER TABLE `dependents`
-  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `employee`

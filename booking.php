@@ -122,6 +122,14 @@ if(isset($_POST['add_booking'])){
 		$query="INSERT INTO generates(Booking_id, Bill_id, booking_date) VALUES('{$booking_id}', '{$bill_id}', '{$booking_date}')";
 	  	$create_query=mysqli_query($con,$query);
 		confirm($create_query);
+
+		$query="LOCK TABLES forr WRITE";
+		mysqli_query($con,$query);
+		
+		sleep(5);
+
+		$query="UNLOCK TABLES";
+		mysqli_query($con,$query);
 		
 		header("Location: confirmation.php?u={$booking_id}&cat={$the_room_category}");
 	}

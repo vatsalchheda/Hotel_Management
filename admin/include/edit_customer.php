@@ -26,6 +26,9 @@ if(isset($_POST['update_cust'])){
 	$dob=$_POST['dob'];
 	$passport_no=$_POST['passport_no'];
 
+	$query="create trigger before_cust_update before update on customer for each row insert into cust_audit set cust_id=old.cust_id, f_name=old.f_name, l_name=old.l_name";
+	mysqli_query($con,$query);
+
 	$query="UPDATE customer SET f_name ='{$f_name}', l_name ='{$l_name}', cust_email ='{$cust_email}', dob='{$dob}', country='{$country}', cust_phone='{$cust_phone}', passport_no='{$passport_no}'  WHERE cust_id ={$the_cust_id}"; 
 
 	$update_cust=mysqli_query($con,$query);
