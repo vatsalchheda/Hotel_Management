@@ -291,7 +291,6 @@ input[type='radio'] {
 
 input[type='file'] {
 	font-size: 1.1em;
-	margin: 3px 0 9px 18%;
 }
 
 /* button to add/update category in categories.php */

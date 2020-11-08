@@ -115,21 +115,21 @@ if(isset($_POST['add_booking'])){
 	  	$create_query=mysqli_query($con,$query);
 		confirm($create_query);
 
+		$query="LOCK TABLES forr WRITE";
+		mysqli_query($con,$query);
+
 		$query="INSERT INTO forr(Booking_id, room_id, check_in_date, check_out_date) VALUES('{$booking_id}', '{$room_id}', '{$check_in}', '{$check_out}')";
 	  	$create_query=mysqli_query($con,$query);
 		confirm($create_query);
 
-		$query="INSERT INTO generates(Booking_id, Bill_id, booking_date) VALUES('{$booking_id}', '{$bill_id}', '{$booking_date}')";
-	  	$create_query=mysqli_query($con,$query);
-		confirm($create_query);
-
-		$query="LOCK TABLES forr WRITE";
-		mysqli_query($con,$query);
-		
 		sleep(5);
 
 		$query="UNLOCK TABLES";
 		mysqli_query($con,$query);
+
+		$query="INSERT INTO generates(Booking_id, Bill_id, booking_date) VALUES('{$booking_id}', '{$bill_id}', '{$booking_date}')";
+	  	$create_query=mysqli_query($con,$query);
+		confirm($create_query);
 		
 		header("Location: confirmation.php?u={$booking_id}&cat={$the_room_category}");
 	}
